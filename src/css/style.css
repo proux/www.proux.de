@@ -428,6 +428,10 @@ a:after {
     opacity: 0.67;
 }
 
+#technologie img:hover {
+    opacity: 0.27;
+}
+
 
 /* ==========================================================================
    MEDIA QUERIES
