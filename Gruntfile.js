@@ -69,7 +69,8 @@ module.exports = function (grunt) {
                 {expand: true, cwd: 'components/simpleicons/icons/aws', src: ['**'], dest: 'assets/img/icons/aws'},
                 {expand: true, cwd: 'components/simpleicons/icons/mysql', src: ['**'], dest: 'assets/img/icons/mysql'},
                 {expand: true, cwd: 'components/simpleicons/icons/html5', src: ['**'], dest: 'assets/img/icons/html5'},
-                
+                {expand: true, cwd: 'components/simpleicons/icons/jquery', src: ['**'], dest: 'assets/img/icons/jquery'},
+                {expand: true, cwd: 'components/simpleicons/icons/css3', src: ['**'], dest: 'assets/img/icons/css3'},
                 {expand: true, cwd: 'components/font-awesome/fonts', src: ['**'], dest: 'assets/fonts/'},
                 {expand: true, cwd: 'src/img/', src: ['**'], dest: 'assets/img/'}
 
