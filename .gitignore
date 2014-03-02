@@ -38,5 +38,5 @@ Thumbs.db
 
 # Package Manager Sources #
 ###########################
-/assets/*
+/src/*
 /node_modules/*
