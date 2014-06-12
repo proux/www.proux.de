@@ -4,15 +4,15 @@
   "author": "Nico Lindemann <nico.lindemann@proux.de>",
   "description": "proux website",
   "devDependencies": {
-    "bower": "1.2.8",
-    "grunt": "~0.4.2",
-    "grunt-cli": "~0.1.11",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-contrib-cssmin": "0.7.0",
-    "grunt-bower-task": "0.3.4",
-    "grunt-contrib-copy" : "0.5.0"
+    "bower": ">=1.2.8",
+    "grunt": ">=0.4.2",
+    "grunt-cli": ">=0.1.11",
+    "grunt-contrib-concat": ">=0.3.0",
+    "grunt-contrib-jshint": ">=0.8.0",
+    "grunt-contrib-uglify": ">=0.3.2",
+    "grunt-contrib-cssmin": ">=0.7.0",
+    "grunt-bower-task": ">=0.3.4",
+    "grunt-contrib-copy" : ">=0.5.0"
   },
   "repository": {
     "type": "git",
