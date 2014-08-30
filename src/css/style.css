@@ -275,7 +275,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/bg1.jpg) no-repeat center top;
+	background: url(img/bg1.jpg) no-repeat center top;
 	margin-top: -50px;
 	padding-top:120px;
 	text-align:center;
@@ -417,11 +417,11 @@ a:after {
 
 
 .divider1 {
-	background-image: url('../img/bg2.jpg')
+	background-image: url('img/bg2.jpg')
 }
 
 .divider2 {
-	background-image: url('../img/bg3.jpg')
+	background-image: url('img/bg3.jpg')
 }
 
 #technologie img {

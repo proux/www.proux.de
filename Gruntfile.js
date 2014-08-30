@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         cssmin: {
             minify: {
                 src: ['components/**/*.css', 'src/css/*.css'],                
-                dest: 'assets/css/style.min.css',
+                dest: 'public/css/style.min.css',
                 keepSpecialComments: '0'
             }
         },
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 src: ['components/jquery/**/*.js',
                       'components/**/*.min.js',
                       'src/js/*.js'],
-                dest: 'assets/js/script.min.js'
+                dest: 'public/js/script.min.js'
             }
         },
 
@@ -56,23 +56,34 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 files: {
-                    'assets/js/script.min.js': ['assets/js/script.min.js'],
+                    'public/js/script.min.js': ['public/js/script.min.js'],
                 }
             }
+        },
+            
+        watch: {
+          scripts: {
+            files: ['src/**/*.*', 'src/*.*'],
+            tasks: ['jshint', 'concat',  'cssmin', 'copy'],
+            options: {
+              spawn: false,
+            },
+          },
         },
         
           copy: {
             main: {
               files: [
                 // includes files within path and its sub-directories
-                {expand: true, cwd: 'components/simpleicons/icons/php', src: ['**'], dest: 'assets/img/icons/php'},
-                {expand: true, cwd: 'components/simpleicons/icons/aws', src: ['**'], dest: 'assets/img/icons/aws'},
-                {expand: true, cwd: 'components/simpleicons/icons/mysql', src: ['**'], dest: 'assets/img/icons/mysql'},
-                {expand: true, cwd: 'components/simpleicons/icons/html5', src: ['**'], dest: 'assets/img/icons/html5'},
-                {expand: true, cwd: 'components/simpleicons/icons/jquery', src: ['**'], dest: 'assets/img/icons/jquery'},
-                {expand: true, cwd: 'components/simpleicons/icons/css3', src: ['**'], dest: 'assets/img/icons/css3'},
-                {expand: true, cwd: 'components/font-awesome/fonts', src: ['**'], dest: 'assets/fonts/'},
-                {expand: true, cwd: 'src/img/', src: ['**'], dest: 'assets/img/'}
+                {expand: true, cwd: 'components/simpleicons/icons/php', src: ['**'], dest: 'public/img/icons/php'},
+                {expand: true, cwd: 'components/simpleicons/icons/aws', src: ['**'], dest: 'public/img/icons/aws'},
+                {expand: true, cwd: 'components/simpleicons/icons/mysql', src: ['**'], dest: 'public/img/icons/mysql'},
+                {expand: true, cwd: 'components/simpleicons/icons/html5', src: ['**'], dest: 'public/img/icons/html5'},
+                {expand: true, cwd: 'components/simpleicons/icons/jquery', src: ['**'], dest: 'public/img/icons/jquery'},
+                {expand: true, cwd: 'components/simpleicons/icons/css3', src: ['**'], dest: 'public/img/icons/css3'},
+                {expand: true, cwd: 'components/font-awesome/fonts', src: ['**'], dest: 'public/fonts/'},
+                {expand: true, cwd: 'src/img/', src: ['**'], dest: 'public/img/'},
+                {src: 'src/index.html', dest: 'public/index.html'},  
 
               ]
             }
@@ -87,8 +98,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-watch'); 
 
-    grunt.registerTask('build', ['jshint', 'bower:install', 'concat', 'uglify', 'cssmin', 'copy', 'bower:clean']);
+    grunt.registerTask('build', ['jshint', 'bower:install', 'concat', 'uglify', 'cssmin', 'copy', 'bower:clean']); 
+    grunt.registerTask('dev', ['jshint', 'bower:install', 'concat',  'cssmin', 'copy', 'watch']);
 
 
 };

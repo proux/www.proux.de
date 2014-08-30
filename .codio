@@ -1,0 +1,14 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+      "Grunt" : "grunt dev"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Project Index": "https://{{domain}}/public/",
+        "Ungit": "https://{{domain}}:9501/#/repository?path=/home/codio/workspace"
+  }
+}
