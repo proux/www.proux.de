@@ -1,6 +1,6 @@
 {
   "name": "www.proux.de",
-  "version": "7.0.1",
+  "version": "7.0.3",
   "dependencies": {
     "simpleicons": "https://github.com/danleech/simpleicons.git",
     "jquery" : "latest",
