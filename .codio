@@ -8,7 +8,7 @@
 
 // Preview button configuration
   "preview": {
-        "Project Index": "https://{{domain}}/public/",
+        "Project Index": "http://{{domain}}/public/",
         "Ungit": "https://{{domain}}:9501/#/repository?path=/home/codio/workspace"
   }
 }

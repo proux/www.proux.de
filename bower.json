@@ -5,18 +5,12 @@
     "simpleicons": "https://github.com/danleech/simpleicons.git",
     "jquery" : "latest",
     "bootstrap": "latest",
-    "font-awesome": "latest",
-    "jquery.scrollTo" : "latest",
-    "jquery.localScroll" : "latest"
+    "font-awesome": "latest"
   },
   "exportsOverride": {
-    "modernizr": {
-      "js": "modernizr.js"
-    },
     "font-awesome": {
       "css": "css/*.min.css",
       "fonts": "fonts/*"
     }
   }
-
 }
