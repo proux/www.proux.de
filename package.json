@@ -1,6 +1,6 @@
 {
   "name": "www.proux.de",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "author": "Nico Lindemann <nico.lindemann@proux.de>",
   "description": "proux website",
   "devDependencies": {
