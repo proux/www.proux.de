@@ -5,16 +5,25 @@ before_install: npm install -g grunt-cli
 install: npm install
 script: grunt build
 deploy:
-  provider: s3
-  access_key_id: AKIAJC2ZSP5C77YTKKNQ
-  secret_access_key:
-    secure: XuG/5sMWQzhGn0TMfiF3SGmPkrh9HAk/DziLAGxYzcfNdoJC4rSeqnbzZPxnECnu0XxzvzHlI4UvCi+10qQKvFjECejm6r0idTDfayZ7y6762MmHMsGcZuH2o01yb+pIeKzmfiB0hEPUgV6ApOpKIraLIIMjHaqwbit377h9RB0=
-  bucket: www.proux.de
-  region: eu-west-1
-  endpoint: www.proux.de.s3-website-eu-west-1.amazonaws.com
-  skip_cleanup: true
-  local-dir: public
-  acl: public_read
-  on:
-    repo: proux/www.proux.de
-    branch: master
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure: KbDsgdNYo7B2b4I1PWhoBgTHCPCKoyu+vL8DSWJgJkb/S7ucVZ05ffcgP4snpLv9CvBIoECgs9pb2gDo/O2LIWqIIiDJ24Lyh1n3I/nmmiQcP1EGCLVAQQsDnMDRr44V0nkWrgIEpHuvcy4Q1HbbA77Q7eyEDtXDD0c1F68m1kI=
+    file: ''
+    on:
+      repo: proux/www.proux.de
+      branch: master
+      tags: true
+  - provider: s3
+    access_key_id: AKIAJC2ZSP5C77YTKKNQ
+    secret_access_key:
+      secure: XuG/5sMWQzhGn0TMfiF3SGmPkrh9HAk/DziLAGxYzcfNdoJC4rSeqnbzZPxnECnu0XxzvzHlI4UvCi+10qQKvFjECejm6r0idTDfayZ7y6762MmHMsGcZuH2o01yb+pIeKzmfiB0hEPUgV6ApOpKIraLIIMjHaqwbit377h9RB0=
+    bucket: www.proux.de
+    region: eu-west-1
+    endpoint: www.proux.de.s3-website-eu-west-1.amazonaws.com
+    skip_cleanup: true
+    local-dir: public
+    acl: public_read
+    on:
+      repo: proux/www.proux.de
+      branch: master
