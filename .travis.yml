@@ -11,7 +11,6 @@ deploy:
       secure: KbDsgdNYo7B2b4I1PWhoBgTHCPCKoyu+vL8DSWJgJkb/S7ucVZ05ffcgP4snpLv9CvBIoECgs9pb2gDo/O2LIWqIIiDJ24Lyh1n3I/nmmiQcP1EGCLVAQQsDnMDRr44V0nkWrgIEpHuvcy4Q1HbbA77Q7eyEDtXDD0c1F68m1kI=
     file: 'README.md'
     on:
-      repo: proux/www.proux.de
       tags: true
   - provider: s3
     access_key_id: AKIAJC2ZSP5C77YTKKNQ
