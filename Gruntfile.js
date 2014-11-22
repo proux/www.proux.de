@@ -37,7 +37,7 @@ module.exports = function (grunt) {
         },
 
         jshint: {
-            files: ["src/js/script.js", "Gruntfile.js"]
+            files: ['src/js/script.js', 'Gruntfile.js']
         },
 
         concat: {
