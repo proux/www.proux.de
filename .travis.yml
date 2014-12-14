@@ -3,7 +3,9 @@ node_js:
 - '0.10'
 before_install: npm install -g grunt-cli
 install: npm install
-script: grunt build
+script:
+  - grunt build
+  - grunt test
 deploy:
   - provider: s3
     access_key_id: AKIAJC2ZSP5C77YTKKNQ
