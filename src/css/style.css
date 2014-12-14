@@ -276,7 +276,7 @@ a:after {
 
 #headerwrap {
         background-image: url("../img/bg1.jpg");
-       
+
 	margin-top: -50px;
 	padding-top:120px;
 	text-align:center;
@@ -284,7 +284,7 @@ a:after {
 	background-position: center center;
 	min-height: 650px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -398,11 +398,11 @@ a:after {
     background-size: cover;
 
     background-attachment: relative;
-    
+
     text-align: center;
 }
 
-.textdivider h1 {
+.textdivider h2 {
 	padding-top: 70px;
 	color: white;
 	font-size: 40px;
@@ -458,4 +458,3 @@ a:after {
 		line-height: 38px;
 	}
 }
-

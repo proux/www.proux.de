@@ -44,3 +44,5 @@ Thumbs.db
 
 # Release
 public
+validation-status.json
+validation-report.json

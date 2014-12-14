@@ -1,22 +1,29 @@
 {
   "name": "www.proux.de",
-  "version": "7.0.3",
+  "version": "7.0.4",
   "author": "Nico Lindemann <nico.lindemann@proux.de>",
   "description": "proux website",
   "devDependencies": {
     "bower": "*",
     "grunt": "*",
+    "grunt-bower-task": "*",
     "grunt-cli": "*",
     "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-cssmin": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-bower-task": "*",
-    "grunt-contrib-copy" : "*",
-    "grunt-contrib-watch" : "*"
+    "grunt-contrib-watch": "*",
+    "grunt-html-validation": "*",
+    "grunt-uncss": "*",
+    "grunt-processhtml": "*"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/proux/www.proux.de.git"
+  },
+  "scripts": {
+    "test": "grunt test"
   }
 }

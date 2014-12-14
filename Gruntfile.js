@@ -30,25 +30,31 @@ module.exports = function (grunt) {
 
         cssmin: {
             minify: {
-                src: ['components/**/*.css', 'src/css/*.css'],                
-                dest: 'public/css/style.min.css',
-                keepSpecialComments: '0'
+                src: ['public/css/style.min.css'],
+                dest: 'public/css/style.min.css'
             }
         },
 
         jshint: {
-            files: ['src/js/script.js', 'Gruntfile.js']
+            files: ['src/js/*', 'Gruntfile.js']
         },
 
         concat: {
-            options: {
-                separator: ''
-            },
-            dist: {
+            js: {
                 src: ['components/jquery/**/*.js',
                       'components/**/*.min.js',
                       'src/js/*.js'],
-                dest: 'public/js/script.min.js'
+                dest: 'public/js/script.min.js',
+                options: {
+                    separator: ''
+                }
+            },
+            css: {
+                src: ['components/**/*.css', 'src/css/*.css'],
+                dest: 'public/css/style.min.css',
+                options: {
+                    separator: ''
+                }
             }
         },
 
@@ -60,17 +66,17 @@ module.exports = function (grunt) {
                 }
             }
         },
-            
+
         watch: {
           scripts: {
             files: ['src/**/*.*', 'src/*.*'],
-            tasks: ['jshint', 'concat',  'cssmin', 'copy'],
+            tasks: ['jshint', 'concat',  'cssmin', 'uncss', 'copy'],
             options: {
               spawn: false,
             },
           },
         },
-        
+
           copy: {
             main: {
               files: [
@@ -83,11 +89,44 @@ module.exports = function (grunt) {
                 {expand: true, cwd: 'components/simpleicons/icons/css3', src: ['**'], dest: 'public/img/icons/css3'},
                 {expand: true, cwd: 'components/font-awesome/fonts', src: ['**'], dest: 'public/fonts/'},
                 {expand: true, cwd: 'src/img/', src: ['**'], dest: 'public/img/'},
-                {src: 'src/index.html', dest: 'public/index.html'},  
+                {src: 'src/index.html', dest: 'public/index.html'},
 
               ]
             }
-          }
+        },
+        csslint: {
+            options: {
+                import: 2
+            },
+            src: ['src/css/*']
+        },
+        validation: {
+            options: {
+                failHard : true,
+                stoponerror : false,
+                reset: true
+            },
+            files: {
+                src: ['src/*.html']
+            }
+        },
+        uncss: {
+            dist: {
+                src: ['public/index.html'],
+                htmlroot     : 'public',
+                dest: 'public/css/style.min.css',
+                options: {
+                    report: 'gzip'
+                }
+            }
+        },
+        processhtml: {
+            dist: {
+                files: {
+                    'public/index.html': ['public/index.html'],
+                }
+            }
+        }
 
 
     });
@@ -98,10 +137,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-watch'); 
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
+    grunt.loadNpmTasks('grunt-html-validation');
+    grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-processhtml');
 
-    grunt.registerTask('build', ['jshint', 'bower:install', 'concat', 'uglify', 'cssmin', 'copy', 'bower:clean']); 
-    grunt.registerTask('dev', ['jshint', 'bower:install', 'concat',  'cssmin', 'copy', 'watch']);
+    grunt.registerTask('build', ['bower:install', 'concat:js', 'concat:css', 'uglify', 'uncss', 'cssmin', 'copy', 'processhtml', 'bower:clean']);
+    grunt.registerTask('dev', ['bower:install', 'concat:js','concat:css',  'uncss', 'cssmin', 'copy', 'processhtml', 'watch']);
+    grunt.registerTask('test', ['jshint', 'csslint', 'validation']);
 
 
 };
