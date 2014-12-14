@@ -113,7 +113,7 @@ module.exports = function (grunt) {
         uncss: {
             dist: {
                 src: ['public/index.html'],
-                htmlroot     : 'public',
+                htmlroot: 'public',
                 dest: 'public/css/style.min.css',
                 options: {
                     report: 'gzip'
@@ -143,8 +143,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-processhtml');
 
-    grunt.registerTask('build', ['bower:install', 'concat:js', 'concat:css', 'uglify', 'uncss', 'cssmin', 'copy', 'processhtml', 'bower:clean']);
-    grunt.registerTask('dev', ['bower:install', 'concat:js','concat:css',  'uncss', 'cssmin', 'copy', 'processhtml', 'watch']);
+    grunt.registerTask('build', ['bower:install', 'concat:js', 'concat:css', 'uglify',  'copy', 'uncss', 'cssmin','processhtml', 'bower:clean']);
+    grunt.registerTask('dev', ['bower:install', 'concat:js','concat:css',  'copy', 'uncss', 'cssmin',  'processhtml', 'watch']);
     grunt.registerTask('test', ['jshint', 'csslint', 'validation']);
 
 
