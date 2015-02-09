@@ -98,7 +98,7 @@ body {
 }
 
 .row {
-margin-right: 0px;
+margin-right: 0;
 margin-left: -15px;
 }
 
@@ -123,7 +123,7 @@ background-color: #dadada;
 
 .navbar-toggle {
 border-color: transparent;
-border: 0px solid transparent;
+border: 0 solid transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -345,7 +345,7 @@ a:after {
 
 #footerwrap {
 	background: #2b2b2b;
-	margin-top: 0px;
+	margin-top: 0;
 	padding-top: 40px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #ddd;
@@ -392,12 +392,13 @@ a:after {
     -o-background-size: 100%;
     background-size: 100%;
 
+    background-attachment: relative;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
-    background-attachment: relative;
 
     text-align: center;
 }
