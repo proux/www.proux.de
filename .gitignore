@@ -39,8 +39,7 @@ Thumbs.db
 # Package Manager Sources #
 ###########################
 /node_modules/*
-/bower_components/*
-/components/*
+/simpleicons/*
 
 # Release
 public

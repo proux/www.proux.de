@@ -1,36 +1,22 @@
-/*global module:false*/
 module.exports = function (grunt) {
+
+    var cwd = process.cwd();
 
     grunt.initConfig({
 
-        bower: {
-            install: {
+        gitclone: {
+            clone: {
                 options: {
-                    targetDir: './components/',
-                    layout: 'byComponent',
-                    install: true,
-                    copy: true,
-                    verbose: true,
-                    cleanTargetDir: false,
-                    cleanBowerDir: false,
-                    bowerOptions: {}
-                }
-            },
-            clean: {
-                options: {
-                    targetDir: './components/',
-                    layout: 'byComponent',
-                    install: false,
-                    copy: false,
-                    cleanTargetDir: true,
-                    cleanBowerDir: true
+                    repository: 'https://github.com/danleech/simple-icons.git',
+                    branch: 'master',
+                    directory: 'simpleicons'
                 }
             }
         },
 
         cssmin: {
             minify: {
-                src: ['public/css/style.min.css'],
+                src: ['style.min.css'],
                 dest: 'public/css/style.min.css'
             }
         },
@@ -41,8 +27,8 @@ module.exports = function (grunt) {
 
         concat: {
             js: {
-                src: ['components/jquery/**/*.js',
-                      'components/**/*.min.js',
+                src: ['node_modules/jquery/dist/jquery.js',
+                      'node_modules/bootstrap/dist/js/bootstrap.js',
                       'src/js/*.js'],
                 dest: 'public/js/script.min.js',
                 options: {
@@ -50,8 +36,10 @@ module.exports = function (grunt) {
                 }
             },
             css: {
-                src: ['components/**/*.css', 'src/css/*.css'],
-                dest: 'public/css/style.min.css',
+                src: ['node_modules/bootstrap/dist/css/bootstrap.css',
+                'node_modules/font-awesome/css/font-awesome.css',
+                'src/css/*.css'],
+                dest: 'style.min.css',
                 options: {
                     separator: ''
                 }
@@ -80,25 +68,25 @@ module.exports = function (grunt) {
           copy: {
             main: {
               files: [
-                // includes files within path and its sub-directories
-                {expand: true, cwd: 'components/simpleicons/icons/php', src: ['**'], dest: 'public/img/icons/php'},
-                {expand: true, cwd: 'components/simpleicons/icons/aws', src: ['**'], dest: 'public/img/icons/aws'},
-                {expand: true, cwd: 'components/simpleicons/icons/mysql', src: ['**'], dest: 'public/img/icons/mysql'},
-                {expand: true, cwd: 'components/simpleicons/icons/html5', src: ['**'], dest: 'public/img/icons/html5'},
-                {expand: true, cwd: 'components/simpleicons/icons/jquery', src: ['**'], dest: 'public/img/icons/jquery'},
-                {expand: true, cwd: 'components/simpleicons/icons/css3', src: ['**'], dest: 'public/img/icons/css3'},
-                {expand: true, cwd: 'components/font-awesome/fonts', src: ['**'], dest: 'public/fonts/'},
+                {expand: true, cwd: 'simpleicons/icons/php', src: ['**'], dest: 'public/img/icons/php'},
+                {expand: true, cwd: 'simpleicons/icons/aws', src: ['**'], dest: 'public/img/icons/aws'},
+                {expand: true, cwd: 'simpleicons/icons/mysql', src: ['**'], dest: 'public/img/icons/mysql'},
+                {expand: true, cwd: 'simpleicons/icons/html5', src: ['**'], dest: 'public/img/icons/html5'},
+                {expand: true, cwd: 'simpleicons/icons/jquery', src: ['**'], dest: 'public/img/icons/jquery'},
+                {expand: true, cwd: 'simpleicons/icons/css3', src: ['**'], dest: 'public/img/icons/css3'},
+                {expand: true, cwd: 'node_modules/font-awesome/fonts', src: ['**'], dest: 'public/fonts/'},
                 {expand: true, cwd: 'src/img/', src: ['**'], dest: 'public/img/'},
+                {src: 'src/index.html', dest: 'index.html'},
                 {src: 'src/index.html', dest: 'public/index.html'},
-
+                {src: ['node_modules/bootstrap/dist/css/bootstrap.css.map'], dest: 'public/css/bootstrap.css.map'}
               ]
             }
         },
         csslint: {
+            src: ['src/css/*'],
             options: {
-                import: 2
+                csslintrc: '.csslintrc'
             },
-            src: ['src/css/*']
         },
         validation: {
             options: {
@@ -112,18 +100,13 @@ module.exports = function (grunt) {
         },
         uncss: {
             dist: {
-                src: ['public/index.html'],
-                htmlroot: 'public',
-                dest: 'public/css/style.min.css',
+                src: ['index.html'],
+                dest: 'style.min.css',
                 options: {
-                    report: 'gzip'
-                }
-            }
-        },
-        processhtml: {
-            dist: {
-                files: {
-                    'public/index.html': ['public/index.html'],
+                    report: 'gzip',
+                    stylesheets : ['style.min.css'],
+                    csspath: '/',
+                    htmlroot: '/'
                 }
             }
         }
@@ -131,7 +114,6 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -141,10 +123,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-html-validation');
     grunt.loadNpmTasks('grunt-uncss');
-    grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-git');
 
-    grunt.registerTask('build', ['bower:install', 'concat:js', 'concat:css', 'uglify',  'copy', 'uncss', 'cssmin','processhtml', 'bower:clean']);
-    grunt.registerTask('dev', ['bower:install', 'concat:js','concat:css',  'copy', 'uncss', 'cssmin',  'processhtml', 'watch']);
+    grunt.registerTask('build', ['gitclone', 'concat:js', 'concat:css', 'uglify',  'copy', 'uncss', 'cssmin']);
+    grunt.registerTask('dev', ['gitclone', 'concat:js','concat:css',  'copy', 'uncss', 'cssmin', 'watch']);
     grunt.registerTask('test', ['jshint', 'csslint', 'validation']);
 
 
