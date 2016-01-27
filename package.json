@@ -4,7 +4,7 @@
     "author": "Nico Lindemann <nico.lindemann@proux.de>",
     "description": "proux website",
     "devDependencies": {
-        "bower": "*",
+        "bower": "1.7.6",
         "grunt": "*",
         "grunt-cli": "*",
         "grunt-contrib-concat": "*",
@@ -15,9 +15,9 @@
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
         "grunt-html-validation": "*",
-        "grunt-git" : "*",
+        "grunt-git": "*",
         "grunt-uncss": "*",
-        "jquery" : "*",
+        "jquery": "*",
         "bootstrap": "*",
         "font-awesome": "*"
     },
