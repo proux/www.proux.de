@@ -6,7 +6,7 @@
     "devDependencies": {
         "bower": "*",
         "grunt": "*",
-        "grunt-cli": "*",
+        "grunt-cli": "0.1.13",
         "grunt-contrib-concat": "*",
         "grunt-contrib-copy": "*",
         "grunt-contrib-csslint": "*",
@@ -15,9 +15,9 @@
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
         "grunt-html-validation": "*",
-        "grunt-git" : "*",
+        "grunt-git": "*",
         "grunt-uncss": "*",
-        "jquery" : "*",
+        "jquery": "*",
         "bootstrap": "*",
         "font-awesome": "*"
     },
