@@ -15,9 +15,9 @@
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
         "grunt-html-validation": "*",
-        "grunt-git" : "*",
+        "grunt-git": "*",
         "grunt-uncss": "*",
-        "jquery" : "*",
+        "jquery": "2.2.1",
         "bootstrap": "*",
         "font-awesome": "*"
     },
