@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             clone: {
                 options: {
                     repository: 'https://github.com/danleech/simple-icons.git',
-                    branch: 'master',
+                    branch: 'e039cf72ab614354fef90ca211b2f768e8cba426',
                     directory: 'simpleicons'
                 }
             }
