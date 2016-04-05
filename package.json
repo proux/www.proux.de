@@ -5,7 +5,7 @@
     "description": "proux website",
     "devDependencies": {
         "bower": "*",
-        "grunt": "*",
+        "grunt": "1.0.0",
         "grunt-cli": "*",
         "grunt-contrib-concat": "*",
         "grunt-contrib-copy": "*",
@@ -15,9 +15,9 @@
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
         "grunt-html-validation": "*",
-        "grunt-git" : "*",
+        "grunt-git": "*",
         "grunt-uncss": "*",
-        "jquery" : "*",
+        "jquery": "*",
         "bootstrap": "*",
         "font-awesome": "*"
     },
