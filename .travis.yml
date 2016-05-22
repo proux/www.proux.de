@@ -17,7 +17,8 @@ node_js:
 - '0.10'
 before_install:
 - npm i -g npm@^2.0.0
-- npm i postcss-cli postcss postcss-import postcss-import-url postcss-copy grunt-cli bower -g
+- npm i postcss-cli bower -g
+- npm i postcss postcss-import postcss-import-url postcss-copy
 - bower install -f
 - postcss -c postcss.json
 - cp src/index.html dist/index.html
