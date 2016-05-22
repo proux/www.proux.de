@@ -8,6 +8,11 @@
  * URL: http://blacktie.co/
  */
 
+@import "bootstrap";
+@import "font-awesome/css/font-awesome.css";
+@import "font-mfizz/dist/font-mfizz.css";
+@import "https://fonts.googleapis.com/css?family=Raleway:400,300,700";
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic";
 
 /* ==========================================================================
    Base Styles and Bootstrap Modifications
@@ -434,6 +439,9 @@ a:after {
     opacity: 0.27;
 }
 
+.icon-margin {
+  margin: 10px 25px;
+}
 
 /* ==========================================================================
    MEDIA QUERIES

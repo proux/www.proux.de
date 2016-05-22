@@ -1,0 +1,26 @@
+{
+  "name": "www",
+  "version": "7.2.0",
+  "description": "proux website",
+  "main": "dist/index.html",
+  "authors": [
+    "Nico Lindemann <nico.lindemann@proux.net>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/proux/www",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-mfizz": "fizzed/font-mfizz#~2.3.0",
+    "font-awesome": "~4.6.3",
+    "bootstrap": "~3.3.6",
+    "google-fonts": "*"
+  }
+}

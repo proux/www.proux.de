@@ -1,0 +1,29 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+  - node_modules
+  - bower_components
+notifications:
+  email: false
+  slack:
+    secure: WPmKf7xFXCGgY7Ssmp3/eyKhaCICQO1KGy37BSUyg+EVFXqzd4n3ImDgwNK05x9BNyzCKyj8fcgMtPfiWjKIzwDlqk+VlQAhktKfY6zfkSbRKoUWJMUUeJcQ+o8bv6769px09pYHlnXjeJLx8jhRZInU9sWfU+HZnIoF2j7zbfItb4jBUWCCzyASbAkWRScPky+iM4I76VZpyDglSGqsePeNR3w1D0InWe2hQ4XPJmrot3vdA92HSRbYdDyyr6u4lkU/xmZjs+k97souIifrT2yyRudHmZCVzuc1bCHexM0cLO4p9/SgIp+TFnjQwIbmLMr91JDMoUwC9Pth0WnzUU2bs8/X3gN5+pAH0vip9nEn3jCD3RP01CIVeS/A/U82exU1v1cy5xSS0AkDg9ubXk+qBx2MGrXHwCGrIb7fH28ArX8qXpRNfleL44JVjbHwwbKE3OOWzlgpnEFKctEBpMxcd6wy1N/V9NMh+w1hBTlpHtDguqn9VrJPOxKULgbKcV5QPQIAj+wHq+a+F7+FMf7kLJHOeK0/2de83fnTOMIERetZDs44D0O/TLAlUsN13LvomqiQfvR6kup8bdzeu55XgUs/I3GVB3k/p5eRerPzEwywnv2dC0QneL6dYuRXHQ+86DdysEQQawzKiS22s5s1vGsARt/IZ/EyO2fsd0Q=
+node_js:
+- '4'
+- iojs-v3
+- iojs-v2
+- iojs-v1
+- '0.12'
+- '0.10'
+before_install:
+- npm i -g npm@^2.0.0
+- npm i postcss-cli postcss postcss-import postcss-import-url postcss-copy grunt-cli bower -g
+- bower install -f
+- postcss -c postcss.json
+- cp src/index.html dist/index.html
+branches:
+  except:
+  - /^v\d+\.\d+\.\d+$/
+addons:
+  code_climate:
+    repo_token: 65bf022d3b618cd3dc544e1996da2a7c98ea425d16b716d7e72adce9f0607c41
