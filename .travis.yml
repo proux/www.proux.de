@@ -20,6 +20,7 @@ before_install:
 - npm i postcss-cli bower -g
 - npm i postcss postcss-import postcss-import-url postcss-copy
 - bower install -f
+install:
 - postcss -c postcss.json
 - cp src/index.html dist/index.html
 branches:
