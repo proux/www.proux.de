@@ -18,11 +18,10 @@ node_js:
   - '0.10'
 before_install:
   - npm i -g npm@^2.0.0
-install:
-  - ./node_modules/bower/bin/bower install -f
 before_script:
   - npm prune
 script:
+  - ./node_modules/bower/bin/bower install -f
   - ./node_modules/postcss/bin/postcss -c postcss.json
   - cp src/index.html dist/index.html
   - cp src/img/logo.png dist/assets/logo.png
