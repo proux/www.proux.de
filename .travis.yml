@@ -24,8 +24,8 @@ before_install:
 script:
 - postcss -c postcss.json
 - cp src/index.html dist/index.html
-- cp src/img/logo.png dist/img/logo.png
-- cp src/img/favicon.ico dist/img/favicon.ico
+- cp src/img/logo.png dist/assets/logo.png
+- cp src/img/favicon.ico dist/assets/favicon.ico
 branches:
   except:
   - /^v\d+\.\d+\.\d+$/

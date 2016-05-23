@@ -9,6 +9,6 @@
     "postcss-copy": {
         "src": "./",
         "dest": "./dist",
-        "template": "img/[hash].[ext]"
+        "template": "assets/[hash].[ext]"
       }
 }
