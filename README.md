@@ -8,7 +8,8 @@
 
 [![Build Status](https://travis-ci.org/proux/www.svg?branch=master)](https://travis-ci.org/proux/www)
 [![Code Climate](https://codeclimate.com/github/proux/www/badges/gpa.svg)](https://codeclimate.com/github/proux/www)
-[![Dependency Status](https://img.shields.io/versioneye/d/user/projects/57435c93ce8d0e00360bd1d6.svg?maxAge=2592000)](https://www.versioneye.com/user/projects/57435c93ce8d0e00360bd1d6)[![devDependency Status](https://david-dm.org/proux/www/dev-status.svg)](https://david-dm.org/proux/www#info=devDependencies)
+[![Dependency Status](https://img.shields.io/versioneye/d/user/projects/57435c93ce8d0e00360bd1d6.svg?maxAge=2592000)](https://www.versioneye.com/user/projects/57435c93ce8d0e00360bd1d6)
+[![devDependency Status](https://david-dm.org/proux/www/dev-status.svg)](https://david-dm.org/proux/www#info=devDependencies)
 
 
 Copyright (c) 2016 proux UG (haftungsbeschränkt)
