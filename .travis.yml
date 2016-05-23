@@ -23,11 +23,14 @@ install:
 before_script:
   - npm prune
 script:
-- ./node_modules/postcss/bin/postcss -c postcss.json
-- cp src/index.html dist/index.html
-- cp src/img/logo.png dist/assets/logo.png
-- cp src/img/favicon.ico dist/assets/favicon.ico
+  - ./node_modules/postcss/bin/postcss -c postcss.json
+  - cp src/index.html dist/index.html
+  - cp src/img/logo.png dist/assets/logo.png
+  - cp src/img/favicon.ico dist/assets/favicon.ico
 after_success:
+  - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
+  - python travis_after_all.py
+  - export $(cat .to_export_back) &> /dev/null
   - npm run semantic-release
 branches:
   except:

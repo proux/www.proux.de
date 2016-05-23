@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "exit 0",
-    "semantic-release": "semantic-release pre && npm run deploy && semantic-release post",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "deploy": "exit 0"
   },
   "repository": {
