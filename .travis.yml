@@ -24,8 +24,8 @@ script:
   - ./node_modules/bower/bin/bower install -f
   - ./node_modules/postcss-cli/bin/postcss -c postcss.json
   - cp src/index.html dist/index.html
-  - cp src/img/logo.png dist/assets/logo.png
-  - cp src/img/favicon.ico dist/assets/favicon.ico
+  - cp src/assets/logo.png dist/assets/logo.png
+  - cp src/assets/favicon.ico dist/assets/favicon.ico
 after_success:
   - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
   - python travis_after_all.py
