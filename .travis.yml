@@ -10,22 +10,25 @@ notifications:
     rooms:
       secure: iu7Lfy20XWeN4x2TNIFA+ozQQq2Uewi9txnQKOvoyWsx7gM1YP2xVZSh6ZAiZpAXCjvsOYpeM/2c7j5FeVc1PONjJMrXJ2bwdKSNmFV5hGxJ8cb92Sjl6t3/W6826+MDQWaJvwwqtV/dJBjHwZ4UjEkrauFGiGZCnJRIet3bH4I=
 node_js:
-- '4'
-- iojs-v3
-- iojs-v2
-- iojs-v1
-- '0.12'
-- '0.10'
+  - '4'
+  - iojs-v3
+  - iojs-v2
+  - iojs-v1
+  - '0.12'
+  - '0.10'
 before_install:
-- npm i -g npm@^2.0.0
-- npm i postcss-cli bower -g
-- npm i postcss postcss-import postcss-import-url postcss-copy
-- bower install -f
+  - npm i -g npm@^2.0.0
+install:
+  - ./node_modules/bower/bin/bower install -f
+before_script:
+  - npm prune
 script:
-- postcss -c postcss.json
+- ./node_modules/postcss/bin/postcss -c postcss.json
 - cp src/index.html dist/index.html
 - cp src/img/logo.png dist/assets/logo.png
 - cp src/img/favicon.ico dist/assets/favicon.ico
+after_success:
+  - npm run semantic-release
 branches:
   except:
   - /^v\d+\.\d+\.\d+$/

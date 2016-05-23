@@ -1,0 +1,38 @@
+{
+  "name": "www",
+  "description": "proux website",
+  "devDependencies": {
+    "@semantic-release/release-notes-generator": "^2.0.0",
+    "bower": "^1.7.9",
+    "cz-conventional-changelog": "^1.1.6",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "postcss-copy": "^4.0.2",
+    "postcss-import": "^8.1.2",
+    "postcss-import-url": "^1.0.0-b",
+    "semantic-release": "^4.3.5"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "semantic-release": "semantic-release pre && npm run deploy && semantic-release post",
+    "deploy": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proux/www.git"
+  },
+  "author": "Nico Lindemann <nico.lindemann@proux.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/proux/www/issues"
+  },
+  "homepage": "https://github.com/proux/www#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "generateNotes": "./node_modules/@semantic-release/release-notes-generator/dist"
+  }
+}
