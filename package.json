@@ -10,7 +10,7 @@
     "postcss-cli": "^2.5.2",
     "postcss-copy": "^4.0.2",
     "postcss-import": "^8.1.2",
-    "postcss-import-url": "^1.0.0-b",
+    "postcss-import-url": "^2.0.0",
     "semantic-release": "^4.3.5"
   },
   "private": true,
