@@ -17,7 +17,7 @@
   "scripts": {
     "test": "exit 0",
     "semantic-release": "semantic-release pre && npm run deploy && semantic-release post",
-    "deploy": "exit 0"
+    "deploy": "s3cmd sync --host=dcs.dunkel.de --host-bucket=www.proux.net.dcs.dunkel.de -P -M -r dist/ s3://www.proux.net/"
   },
   "repository": {
     "type": "git",

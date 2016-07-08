@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 language: node_js
 cache:
   directories:
@@ -10,30 +10,30 @@ notifications:
     rooms:
       secure: iu7Lfy20XWeN4x2TNIFA+ozQQq2Uewi9txnQKOvoyWsx7gM1YP2xVZSh6ZAiZpAXCjvsOYpeM/2c7j5FeVc1PONjJMrXJ2bwdKSNmFV5hGxJ8cb92Sjl6t3/W6826+MDQWaJvwwqtV/dJBjHwZ4UjEkrauFGiGZCnJRIet3bH4I=
 node_js:
-  - '4'
-  - iojs-v3
-  - iojs-v2
-  - iojs-v1
-  - '0.12'
-  - '0.10'
+- '4'
 before_install:
-  - npm i -g npm@^2.0.0
+- npm i -g npm@^2.0.0
+- sudo pip install s3cmd
 before_script:
-  - npm prune
+- npm prune
 script:
-  - ./node_modules/bower/bin/bower install -f
-  - ./node_modules/postcss-cli/bin/postcss -c postcss.json
-  - cp src/index.html dist/index.html
-  - cp src/assets/logo.png dist/assets/logo.png
-  - cp src/assets/favicon.ico dist/assets/favicon.ico
+- ./node_modules/bower/bin/bower install -f
+- ./node_modules/postcss-cli/bin/postcss -c postcss.json
+- cp src/index.html dist/index.html
+- cp src/assets/logo.png dist/assets/logo.png
+- cp src/assets/favicon.ico dist/assets/favicon.ico
 after_success:
-  - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
-  - python travis_after_all.py
-  - export $(cat .to_export_back) &> /dev/null
-  - npm run semantic-release
+- curl -Lo travis_after_all.py https://git.io/travis_after_all
+- python travis_after_all.py
+- export $(cat .to_export_back) &> /dev/null
+- npm run semantic-release
 branches:
   except:
   - /^v\d+\.\d+\.\d+$/
 addons:
   code_climate:
     repo_token: 65bf022d3b618cd3dc544e1996da2a7c98ea425d16b716d7e72adce9f0607c41
+env:
+  global:
+  - secure: SfBg38ryrh3PXNjTuRvaxAAV8qRApCxm5Gv8CxXF7x/7tIQkCGbFuVcW5ZM9Gjehrm+rbRjaY4bodAJXK2mob38mh0Oyd4Rhkj27EeUgNkmWutyT7BqNMRup2ZRKL7rJNPZy/LJwlV8iWnT2I2/q7qpuNC+ia1+c5PfP0XSD2rI=
+  - secure: LzfVVaWmlcx8BtfVqlLjpj3m87O94bLZmqeTpLOn9FIDMWwL44XTrc8gD2BOJyN41ZYSYzPf6xy62imeAGjaUCNjbhfheFBRr3DGeyYlrGiZp7xYsgIrh1F91OJnhKQYdEU8C0oXF3l9O1rKu+oUes4BSPIrXGuZSfQq09m771Y=
