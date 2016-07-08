@@ -149,8 +149,7 @@ a img {
     background: #f5f5f5;
 }
 
-/* Titles */
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5 {
     font-family: "Raleway";
     font-weight: 300;
     color: #333;
@@ -282,7 +281,8 @@ a:after {
   background-size: cover;
 }
 
-#headerwrap h1 {
+h1 {
+  font-family: "Raleway";
 	color:#ffffff;
 	margin-top: 90px;
 	padding-bottom: 30px;
@@ -338,7 +338,9 @@ a:after {
 	text-align: center;
 }
 
-#footerwrap h6 {
+h6 {
+  font-family: "Raleway";
+  font-weight: 300;
 	color: white;
 }
 
@@ -366,7 +368,6 @@ a:after {
     margin-top: 45px;
 
     background-position: center center;
-    background-attachment: relative;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -377,6 +378,8 @@ a:after {
 }
 
 .textdivider h2 {
+  font-family: "Raleway";
+  font-weight: 300;
 	padding-top: 70px;
 	color: white;
 	font-size: 40px;
@@ -427,7 +430,7 @@ a:after {
 }
 
 @media screen and (max-width:769px) {
-	#headerwrap h1 {
+	.headerwraph1 {
 		font-size: 80px;
 	}
 	#headerwrap p {
