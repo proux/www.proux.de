@@ -6,7 +6,7 @@
     "@semantic-release/release-notes-generator": "^2.0.0",
     "bower": "^1.7.9",
     "cz-conventional-changelog": "^1.1.6",
-    "postcss": "^5.0.21",
+    "postcss": "^5.1.0",
     "postcss-cli": "^2.5.2",
     "postcss-copy": "^4.0.2",
     "postcss-import": "^8.1.2",
