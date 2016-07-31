@@ -19,7 +19,7 @@ before_script:
 script:
 - ./node_modules/bower/bin/bower install -f
 - ./node_modules/postcss-cli/bin/postcss -c postcss.json
-- cp src/index.html dist/index.html
+- ./node_modules/pug-cli/index.js src --out dist
 - cp src/assets/logo.png dist/assets/logo.png
 - cp src/assets/favicon.ico dist/assets/favicon.ico
 after_success:

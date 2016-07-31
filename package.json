@@ -11,6 +11,7 @@
     "postcss-copy": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-import-url": "^2.1.0",
+    "pug-cli": "^1.0.0-alpha6",
     "semantic-release": "^4.3.5"
   },
   "private": true,
