@@ -98,34 +98,6 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.col-md-4 {
-	padding-bottom: 20px;
-}
-
-.row {
-margin-right: 0;
-margin-left: -15px;
-}
-
-.navbar-default {
-border-color: transparent;
-background-color: #dadada;
-}
-
-
-.navbar-toggle {
-border-color: transparent;
-border: 0 solid transparent;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-	background-color: #16a085;
-	color: white;
-}
-
-
-
 hr {
     position: relative;
     border: none;
@@ -145,10 +117,6 @@ a img {
     background: white;
 }
 
-.odd a img {
-    background: #f5f5f5;
-}
-
 h3, h4, h5 {
     font-family: "Raleway";
     font-weight: 300;
@@ -160,10 +128,6 @@ h3, h4, h5 {
 p {
     line-height: 28px;
     margin-bottom: 25px;
-}
-
-.centered {
-    text-align: center;
 }
 
 .paragraph-lead {
@@ -191,35 +155,6 @@ pre {
 
 small {
     font-size: 12px;
-}
-
-blockquote,
-blockquote p {
-    line-height: 28px;
-    color: #999;
-    font-weight: 300;
-    font-style: italic;
-}
-
-blockquote {
-    position: relative;
-    margin: 0 0 40px -30px;
-    padding-left: 30px;
-    border-left: 5px solid #3498db;
-}
-
-blockquote cite {
-    position: absolute;
-    bottom: -25px;
-    right: 0;
-    font-size: 12px;
-    font-style: italic;
-    color: #333;
-    font-weight: 300;
-}
-
-blockquote cite:before {
-    content: "-- "
 }
 
 /* Images */
@@ -259,19 +194,58 @@ a:after {
     color: #fff;
 }
 
+.divider2 ul
+{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
 
+.divider2 ul li
+{
+    list-style-type: none;
+    display: inline;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.divider2 li:before {
+    color: #fff;
+    margin: 0 10px;
+    content: " | ";
+}
+
+.divider2 li:first-child:before {
+content: none;
+}
+
+#kontakt {
+    margin-bottom: 75px;
+    padding-top: 40px;
+}
+
+#kontakt p {
+  margin-bottom: 0px;
+}
+
+#service h2 {
+  margin-top: 70px;
+}
+
+#service p {
+  margin-bottom: 70px;
+}
 
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
 
-#headerwrap {
-        background-image: url("../assets/bg1.jpg");
-
+header {
+  background-image: url("../assets/bg1.jpg");
 	margin-top: -50px;
-	padding-top:120px;
+	padding-top:290px;
 	text-align:center;
-        background-repeat: no-repeat;
+  background-repeat: no-repeat;
 	background-position: center center;
 	min-height: 650px;
 	width: 100%;
@@ -281,18 +255,7 @@ a:after {
   background-size: cover;
 }
 
-h1 {
-  font-family: "Raleway";
-	color:#ffffff;
-	margin-top: 90px;
-	padding-bottom: 30px;
-	letter-spacing: 8px;
-	font-size: 100px;
-	font-weight: bold;
-	text-shadow: 2px 2px 2px #000;
-}
-
-#headerwrap p {
+header p {
 	color:#ffffff;
 	font-size: 40px;
 	font-weight: 400;
@@ -301,6 +264,11 @@ h1 {
 	letter-spacing: 3px;
 	margin-left: 15px;
 	text-shadow: 1px 1px 1px #000;
+  margin-bottom: 0;
+}
+
+header img {
+  margin-bottom: 50px
 }
 
 #greywrap {
@@ -309,10 +277,6 @@ h1 {
 	padding-top: 40px;
 	border: 1px solid #ddd;
 	text-align: center;
-}
-
-#greywrap .callout {
-	margin-bottom: 20px;
 }
 
 #greywrap p {
@@ -342,6 +306,10 @@ h6 {
   font-family: "Raleway";
   font-weight: 300;
 	color: white;
+}
+
+h2 {
+  text-align: center;
 }
 
 
@@ -376,7 +344,7 @@ h6 {
 .textdivider h2 {
   font-family: "Raleway";
   font-weight: 300;
-	padding-top: 70px;
+	padding-top: 0;
 	color: white;
 	font-size: 40px;
 }
@@ -391,11 +359,18 @@ h6 {
 
 
 .divider1 {
-	background-image: url('../assets/bg2.jpg')
+	background-image: url('../assets/bg2.jpg');
+  padding-top: 70px;
 }
 
 .divider2 {
-	background-image: url('../assets/bg3.jpg')
+	background-image: url('../assets/bg3.jpg');
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+#technologie {
+  padding-top: 40px;
 }
 
 #technologie img {
@@ -408,6 +383,7 @@ h6 {
 
 .icon-margin {
   margin: 10px 25px;
+  color: #555;
 }
 
 /* ==========================================================================
@@ -416,20 +392,17 @@ h6 {
 
 
 @media screen and (max-width:1050px), screen and (max-device-width:1050px){
-	body .header{background-attachment: scroll;}
+	body header{ background-attachment: scroll;}
 }
 
 
 /*ipad portrait*/
 @media only screen and (min-device-width:768px) and (max-device-width : 1024px) and (orientation : portrait){
-	.header{background-attachment: scroll;}
+	header{ background-attachment: scroll; }
 }
 
 @media screen and (max-width:769px) {
-	.headerwraph1 {
-		font-size: 80px;
-	}
-	#headerwrap p {
+	header p {
 		font-size: 30px;
 		line-height: 38px;
 	}
