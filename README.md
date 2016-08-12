@@ -1,4 +1,4 @@
-# www.proux.de
+# www.proux.net
 
 [![GitHub release](https://img.shields.io/github/release/proux/www.svg?maxAge=2592000)](https://github.com/proux/www/releases)
 [![license](https://img.shields.io/badge/licence-copyright-blue.svg)](https://github.com/proux/www/blob/develop/LICENSE)
