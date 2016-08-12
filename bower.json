@@ -1,6 +1,5 @@
 {
   "name": "www",
-  "version": "7.2.0",
   "description": "proux website",
   "main": "dist/index.html",
   "authors": [
@@ -20,6 +19,7 @@
   "dependencies": {
     "font-mfizz": "fizzed/font-mfizz#~2.3.0",
     "font-awesome": "~4.6.3",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "logo": "https://github.com/proux/logo.git"
   }
 }

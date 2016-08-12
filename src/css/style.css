@@ -386,6 +386,16 @@ h2 {
   color: #555;
 }
 
+#prouxLogo {
+  margin-bottom: 50px;
+  vertical-align: middle;
+  transform: scale(1.1);
+}
+
+#prouxLogo path {
+  fill: #fff;
+}
+
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
