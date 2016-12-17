@@ -8,8 +8,8 @@
     "cz-conventional-changelog": "^1.1.6",
     "postcss": "^5.1.1",
     "postcss-cli": "^2.5.2",
-    "postcss-copy": "^5.0.1",
-    "postcss-import": "^8.1.2",
+    "postcss-copy": "^6.0.0",
+    "postcss-import": "^9.0.0",
     "postcss-import-url": "^2.2.0",
     "pug-cli": "^1.0.0-alpha6",
     "semantic-release": "^6.3.2"
