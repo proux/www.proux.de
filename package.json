@@ -7,7 +7,7 @@
     "bower": "^1.7.9",
     "cz-conventional-changelog": "^2.0.0",
     "postcss": "^5.2.6",
-    "postcss-cli": "^2.5.2",
+    "postcss-cli": "^3.0.0",
     "postcss-copy": "^6.0.0",
     "postcss-import": "^9.0.0",
     "postcss-import-url": "^2.2.0",
