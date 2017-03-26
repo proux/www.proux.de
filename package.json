@@ -20,7 +20,7 @@
   "private": true,
   "scripts": {
     "build": "npm run bower && npm run postcss && npm run pug && npm run copy",
-    "bower": "bower install",
+    "bower": "bower install --allow-root",
     "postcss": "postcss src/css/style.css --config postcss.json -o dist/css/style.css --no-map",
     "pug": "pug src --out dist",
     "copy": "cpy src/assets/favicon.ico dist/assets/",
