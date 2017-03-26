@@ -1,7 +1,5 @@
 {
     "use": ["postcss-import", "postcss-import-url", "postcss-copy"],
-    "input": "src/css/style.css",
-    "output": "dist/css/style.css",
     "local-plugins": true,
     "postcss-import": {
         "path": "bower_components"

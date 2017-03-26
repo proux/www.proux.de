@@ -9,10 +9,11 @@
     "cz-conventional-changelog": "^2.0.0",
     "node-static": "^0.7.9",
     "postcss": "^5.2.6",
-    "postcss-cli": "^3.0.0",
+    "postcss-cli": "2.6.0",
     "postcss-copy": "^6.0.0",
     "postcss-import": "^9.0.0",
     "postcss-import-url": "^2.2.0",
+    "postcss-load-config": "^1.2.0",
     "pug-cli": "^1.0.0-alpha6",
     "semantic-release": "^6.3.2"
   },
@@ -20,12 +21,28 @@
   "scripts": {
     "build": "npm run bower && npm run postcss && npm run pug && npm run copy",
     "bower": "bower install",
-    "postcss": "postcss src/css/style.css -o dist/css/style.css -c postcss.json",
+    "postcss": "postcss src/css/style.css --config postcss.json -o dist/css/style.css --no-map",
     "pug": "pug src --out dist",
     "copy": "cpy src/assets/favicon.ico dist/assets/",
     "test": "exit 0",
-    "start": "static -p $PORT dist",
+    "start": "static -a $IP -p $PORT dist",
     "semantic-release": "semantic-release pre && npm run deploy && semantic-release post"
+  },
+  "postcss": {
+    "use": [
+      "postcss-import",
+      "postcss-import-url",
+      "postcss-copy"
+    ],
+    "local-plugins": true,
+    "postcss-import": {
+      "path": "bower_components"
+    },
+    "postcss-copy": {
+      "src": "./",
+      "dest": "./dist",
+      "template": "assets/[hash].[ext]"
+    }
   },
   "repository": {
     "type": "git",
