@@ -17,10 +17,7 @@ before_install:
 before_script:
 - npm prune
 script:
-- ./node_modules/bower/bin/bower install -f
-- ./node_modules/postcss-cli/bin/postcss -c postcss.json
-- ./node_modules/pug-cli/index.js src --out dist
-- cp src/assets/favicon.ico dist/assets/favicon.ico
+- npm run build
 after_success:
 - curl -Lo travis_after_all.py https://git.io/travis_after_all
 - python travis_after_all.py

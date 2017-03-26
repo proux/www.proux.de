@@ -5,6 +5,7 @@
     "@nulliel/last-release-git-tag": "^1.0.1",
     "@semantic-release/release-notes-generator": "^2.0.0",
     "bower": "^1.7.9",
+    "cpy-cli": "^1.0.1",
     "cz-conventional-changelog": "^2.0.0",
     "postcss": "^5.2.6",
     "postcss-cli": "^2.5.2",
@@ -16,6 +17,11 @@
   },
   "private": true,
   "scripts": {
+    "build": "npm run bower && npm run postcss && npm run pug && npm run copy",
+    "bower": "bower install",
+    "postcss": "postcss src/css/style.css -o public/css/style.css -c postcss.json",
+    "pug": "pug src --out dist",
+    "copy": "cpy src/assets/favicon.ico dist/assets/",
     "test": "exit 0",
     "semantic-release": "semantic-release pre && npm run deploy && semantic-release post",
     "deploy": "s3cmd sync --host=dcs.dunkel.de --no-mime-magic --host-bucket=www.proux.net.dcs.dunkel.de -P -M -r dist/ s3://www.proux.net/"
