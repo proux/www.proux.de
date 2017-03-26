@@ -26,23 +26,7 @@
     "copy": "cpy src/assets/favicon.ico dist/assets/",
     "test": "exit 0",
     "start": "static -a $IP -p $PORT dist",
-    "semantic-release": "semantic-release pre && npm run deploy && semantic-release post"
-  },
-  "postcss": {
-    "use": [
-      "postcss-import",
-      "postcss-import-url",
-      "postcss-copy"
-    ],
-    "local-plugins": true,
-    "postcss-import": {
-      "path": "bower_components"
-    },
-    "postcss-copy": {
-      "src": "./",
-      "dest": "./dist",
-      "template": "assets/[hash].[ext]"
-    }
+    "semantic-release": "semantic-release pre && semantic-release post"
   },
   "repository": {
     "type": "git",
