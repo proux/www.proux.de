@@ -9,7 +9,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "node-static": "^0.7.9",
     "postcss": "^5.2.6",
-    "postcss-cli": "2.6.0",
+    "postcss-cli": "3.1.0",
     "postcss-copy": "^6.0.0",
     "postcss-import": "^9.0.0",
     "postcss-import-url": "^2.2.0",
