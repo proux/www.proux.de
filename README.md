@@ -6,6 +6,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 [![Build Status](https://travis-ci.org/proux/www.svg?branch=master)](https://travis-ci.org/proux/www)
+[![Docker Build Status](https://img.shields.io/docker/build/prouxnet/www.svg)](https://hub.docker.com/r/prouxnet/www/builds/)
 [![Code Climate](https://codeclimate.com/github/proux/www/badges/gpa.svg)](https://codeclimate.com/github/proux/www)
 [![Dependency Status](https://dependencyci.com/github/proux/www/badge)](https://dependencyci.com/github/proux/www)
 [![Known Vulnerabilities](https://snyk.io/test/github/proux/www/badge.svg)](https://snyk.io/test/github/proux/www)
