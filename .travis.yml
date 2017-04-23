@@ -13,6 +13,10 @@ node_js:
 - '4'
 before_install:
 - npm i -g npm@^2.0.0
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget -qO- https://github.com/lukasmartinelli/hadolint/releases/download/v1.2.1/hadolint_darwin_amd64 > hadolint; fi
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget -qO- https://github.com/lukasmartinelli/hadolint/releases/download/v1.2.1/hadolint_linux_amd64 > hadolint; fi
+- chmod +x hadolint
+- ./hadolint Dockerfile
 before_script:
 - npm prune
 script:
