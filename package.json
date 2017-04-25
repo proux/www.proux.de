@@ -25,7 +25,7 @@
     "pug": "pug src --out dist",
     "copy": "cpy src/assets/favicon.ico dist/assets/",
     "test": "exit 0",
-    "start": "static -a $IP -p $PORT dist",
+    "start": "static -a 0.0.0.0 -p 8080 dist",
     "semantic-release": "semantic-release pre && semantic-release post"
   },
   "repository": {
