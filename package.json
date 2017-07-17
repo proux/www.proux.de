@@ -11,7 +11,7 @@
     "font-awesome": "^4.7.0",
     "font-mfizz": "git+https://git@github.com/fizzed/font-mfizz",
     "node-static": "^0.7.9",
-    "postcss": "^6.0.5",
+    "postcss": "^6.0.7",
     "postcss-cli": "4.1.0",
     "postcss-copy": "^7.0.0",
     "postcss-import": "^10.0.0",
