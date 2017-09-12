@@ -12,7 +12,7 @@
     "font-mfizz": "git+https://git@github.com/fizzed/font-mfizz",
     "node-static": "^0.7.9",
     "postcss": "^6.0.5",
-    "postcss-cli": "4.1.0",
+    "postcss-cli": "4.1.1",
     "postcss-copy": "^7.0.0",
     "postcss-import": "^10.0.0",
     "postcss-import-url": "^2.2.0",
