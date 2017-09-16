@@ -18,7 +18,7 @@
     "postcss-import-url": "^2.2.0",
     "postcss-load-config": "^1.2.0",
     "pug-cli": "^1.0.0-alpha6",
-    "semantic-release": "^7.0.1"
+    "semantic-release": "^8.0.0"
   },
   "private": true,
   "scripts": {
