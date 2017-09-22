@@ -1,5 +1,5 @@
 {
-  "name": "www",
+  "name": "@proux/www",
   "description": "proux website",
   "devDependencies": {
     "@nulliel/last-release-git-tag": "^1.0.1",
@@ -18,14 +18,15 @@
     "postcss-import-url": "^2.2.0",
     "postcss-load-config": "^1.2.0",
     "pug-cli": "^1.0.0-alpha6",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.2",
+    "paymentfont": "^1.2.5"
   },
   "private": true,
   "scripts": {
     "build": "npm run postcss && npm run pug && npm run copy",
     "postcss": "postcss src/css/style.css --config postcss.config.js -o dist/css/style.css --no-map",
-    "pug": "pug src --out dist",
-    "copy": "cpy src/assets/favicon.ico dist/assets/",
+    "pug": "pug src/views --out dist",
+    "copy": "cpy src/assets/favicon.ico dist/assets/ && cpy src/js/* dist/js/",
     "test": "exit 0",
     "start": "static -a 0.0.0.0 -p 8080 dist",
     "semantic-release": "semantic-release pre && semantic-release post"

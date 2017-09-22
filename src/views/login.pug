@@ -1,0 +1,63 @@
+doctype html
+html(lang='de')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='Proux')
+    meta(name='author', content='Nico Lindemann')
+    title Proux
+    link(href='assets/favicon.ico', rel='shortcut icon')
+    link(href='css/style.css', rel='stylesheet')
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top: .container
+      ul.nav.navbar-nav
+        li: a(href='/') Zurück zur Homepage
+
+    #login.buffer
+      .container.spacer
+        .row
+           h2 LOGIN
+           hr
+           .col-lg-offset-2.col-lg-8
+             #message.hidden
+               p Ein Fehler ist aufgetreten.
+             br
+             br
+             .container-fluid
+               .row
+                 a.btn.btn-default.btn-lg.col-lg-4.col-lg-offset-4(href='https://auth.proux.net/github?success=http%3A%2F%2F0.0.0.0%3A8080%2Fsystem.html&failure=http%3A%2F%2F0.0.0.0%3A8080%2Fsystem.html')
+                   i.fa.fa-github
+                   | &nbsp;Login mit Github
+             hr
+             .container-fluid
+               .row
+                 a.btn.btn-default.btn-lg.col-lg-4.col-lg-offset-4(href='https://auth.proux.net/facebook?scope=email&success=http%3A%2F%2F0.0.0.0%3A8080%2Fsystem.html&failure=http%3A%2F%2F0.0.0.0%3A8080%2Fsystem.html')
+                   i.fa.fa-facebook
+                   | &nbsp;Login mit Facebook
+             //-
+               hr
+               .container-fluid
+                 .row
+                   a.btn.btn-default.btn-lg.col-lg-4.col-lg-offset-4(href='https://auth.proux.net/twitter')
+                     i.fa.fa-twitter
+                     | &nbsp;Login mit Twitter
+               hr
+               .container-fluid
+                 .row
+                   a.btn.btn-default.btn-lg.col-lg-4.col-lg-offset-4(href='https://auth.proux.net/google')
+                     i.fa.fa-google
+                     | &nbsp;Login mit Google
+             //
+
+    #footerwrap: .container
+      .row
+        include ../../node_modules/@proux/logo/logo.svg
+        h6 &copy; Copyright 2017
+
+    script.
+     if (new URLSearchParams(window.location.search).get('login')) {
+        document.getElementById('message').classList.add('alert')
+        document.getElementById('message').classList.add('alert-danger')
+        document.getElementById('message').classList.remove('hidden')
+     }
+
