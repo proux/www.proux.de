@@ -14,9 +14,11 @@ html(lang='de')
         li: a(href='#service') Service
         li: a(href='#technologie') Technologie
         li: a(href='#kontakt') Kontakt
+      ul.nav.navbar-nav.navbar-right
+        li: a(href='login.html') Login
 
-    header
-      include ../node_modules/@proux/logo/logo.svg
+    header.bgImage
+      include ../../node_modules/@proux/logo/logo.svg
       p Web Consulting.
       p Web Solutions.
 
@@ -57,7 +59,7 @@ html(lang='de')
         h2 AKTUELLE TECHNOLOGIEN
         hr
         .col-lg-4
-          a(href='https://redis.io', target='_blank'): span.icon-redis.fa-4x.icon-margin
+          a(href='https://redis.io', target='_blank', aria-label='redis website'): span.icon-redis.fa-4x.icon-margin
           a(href='https://nodejs.org/en/', target='_blank'): span.icon-nodejs.fa-4x.icon-margin
           a(href='https://www.java.com', target='_blank'): span.icon-java.fa-4x.icon-margin
           p Serverseitig und in Bezug auf Speicher-Fragen setzen wir aktuell prim&auml;r node.js und Java als Programmiersprache und Redis als Speicher-Engine ein.
@@ -79,10 +81,10 @@ html(lang='de')
         h2 AUS HAMBURG MIT <span class="fa fa-heart"></span>
         hr
         ul
-          li: a.fa.fa-twitter(href='https://twitter.com/prouxnet')
-          li: a.fa.fa-github(href='https://github.com/proux')
-          li: a.fa.fa-css3(href='https://codepen.io/proux')
-          li: a.fa.fa-facebook(href='https://www.facebook.com/proux.net')
+          li: a.fa.fa-twitter(href='https://twitter.com/prouxnet',aria-label='proux twitter account')
+          li: a.fa.fa-github(href='https://github.com/proux',aria-label='proux github account')
+          li: a.fa.fa-css3(href='https://codepen.io/proux',aria-label='proux codepen account')
+          li: a.fa.fa-facebook(href='https://www.facebook.com/proux.net',aria-label='proux facebook account')
 
     #kontakt: .container
       .row
@@ -103,4 +105,3 @@ html(lang='de')
     #footerwrap: .container
       .row
         h6 &copy; Copyright 2017
-        small Theme by <a href='http://blacktie.co'>BlackTie.co</a>

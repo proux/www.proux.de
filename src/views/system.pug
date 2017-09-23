@@ -1,0 +1,85 @@
+doctype html
+html(lang='de')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='Proux')
+    meta(name='author', content='Nico Lindemann')
+    title Proux
+    link(href='assets/favicon.ico', rel='shortcut icon')
+    link(href='css/style.css', rel='stylesheet')
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top: .container
+      ul.nav.navbar-nav
+        li: a(href='#domains') Domains
+        li: a(href='#payment') Zahlungsdaten
+        li: a(href='#invoices') Rechnungen
+      ul.nav.navbar-nav.navbar-right
+        li: a(href='https://auth.proux.net/logout?success=http%3A%2F%2Fwww.proux.net%2Flogin.html&failure=http%3A%2F%2Fwww.proux.net%2Flogin.html') Logout
+
+    #loader
+
+    #domains.buffer
+      .container.spacer
+        .row
+           h2 DOMAINS
+           hr
+           .col-lg-offset-2.col-lg-8
+             #tree
+             .pull-right
+                p
+                    a(href='/') Domain hinzufügen
+             .clearfix
+
+    #payment.buffer
+      .container.spacer
+        .row
+          h2 ZAHLUNGSDATEN
+          hr
+          .col-lg-offset-2.col-lg-8
+            #paymentList
+            .pull-right
+                p
+                    a(href='#payment-form' data-toggle="collapse") Kreditkarte hinzufügen
+                    | &nbsp;|&nbsp;
+                    a(data-placement='right' data-toggle='tooltip' title='Noch nicht verfügbar') SEPA Mandat hinzufügen
+            .clearfix
+            #payment-form.collapse
+              form.list-group-item(action='/charge', method='post')
+                .form-row.col-lg-11
+                  #card-element
+                  #card-errors(role='alert')
+                button.btn.btn-primary.btn-xs.btn-link.pull-right(data-placement='right' data-toggle='tooltip' title='Hinzufügen')
+                  span.fa.fa-plus
+                .clearfix
+
+    #invoices.buffer
+      .container.spacer
+        .row
+           h2 RECHNUNGEN
+           hr
+           .col-lg-offset-2.col-lg-8
+               #invoiceList
+
+    #footerwrap: .container
+      .row
+        include ../../node_modules/@proux/logo/logo.svg
+        h6 &copy; Copyright 2017
+
+    #myModal.modal.fade(role='dialog')
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h4.modal-title Modal Header
+          .modal-body
+            p This is a small modal.
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+    script(src='https://js.stripe.com/v3/')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=' crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js')
+    script(src='js/index.js')
+
