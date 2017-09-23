@@ -72,16 +72,18 @@ fetch('https://data.proux.net', {credentials: 'include'})
       .on('nodeSelected', function (event, data) {
         console.log(event, data)
         $("#myModal").modal()
-      });
+      })
 
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip()
 
     result.invoices.data.forEach(function (item) {
-      var invoiceElement = document.createElement('div')
-      invoiceElement.innerHTML = item.receipt_number
-      invoiceElement.classList.add('list-group-item')
-      invoiceElement.classList.add('clearfix')
-      invoiceList.appendChild(invoiceElement)
+      if (item.receipt_number) {
+        var invoiceElement = document.createElement('div')
+        invoiceElement.innerHTML = item.receipt_number
+        invoiceElement.classList.add('list-group-item')
+        invoiceElement.classList.add('clearfix')
+        invoiceList.appendChild(invoiceElement)
+      }
     })
 
     result.sources.data.forEach(function (item) {
@@ -94,22 +96,22 @@ fetch('https://data.proux.net', {credentials: 'include'})
         switch (item.brand) {
           case 'Visa':
             ccElement.className = 'pf pf-visa'
-            break;
+            break
           case 'American Express':
             ccElement.className = 'pf pf-american-express'
-            break;
+            break
           case 'MasterCard':
             ccElement.className = 'pf pf-mastercard-alt'
-            break;
+            break
           case 'Discover':
             ccElement.className = 'pf pf-discover'
-            break;
+            break
           case 'JCB':
             ccElement.className = 'pf pf-jcb'
-            break;
+            break
           case 'Diners Club':
             ccElement.className = 'pf pf-diners'
-            break;
+            break
           default:
             ccElement.className = 'pf pf-credit-card'
         }
@@ -124,16 +126,16 @@ fetch('https://data.proux.net', {credentials: 'include'})
         }
       }
 
-      var rightContext = '<span class="pull-right">';
+      var rightContext = '<span class="pull-right">'
       if (item.id === result.default_source) {
-        rightContext += '<span class="badge">standard</span>';
+        rightContext += '<span class="badge">standard</span>'
       }
       rightContext += '<button class="btn btn-xs btn-link" data-placement="right" data-toggle="tooltip" title="Löschen">\n' +
-        '<span class="fa fa-trash"></span></button></span>';
+        '<span class="fa fa-trash"></span></button></span>'
       paymentElement.innerHTML = paymentElement.innerHTML + rightContext
       paymentList.appendChild(paymentElement)
     })
-    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip()
     paymentList.classList.add('list-group')
     var elements = stripe.elements()
 
@@ -167,9 +169,8 @@ fetch('https://data.proux.net', {credentials: 'include'})
 
     document.getElementById('payment-form').addEventListener('submit', function (event) {
       event.preventDefault()
-      card.source.metadata.customer = result.id
 
-      stripe.createSource(card).then(function (result) {
+      stripe.createSource(card, { customer: result.id }).then(function (result) {
         if (result.error) {
           document.getElementById('card-errors').textContent = result.error.message
         } else {
