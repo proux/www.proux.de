@@ -170,12 +170,24 @@ fetch('https://data.proux.net', {credentials: 'include'})
     document.getElementById('payment-form').addEventListener('submit', function (event) {
       event.preventDefault()
 
-      stripe.createSource(card, { customer: result.id }).then(function (result) {
-        if (result.error) {
-          document.getElementById('card-errors').textContent = result.error.message
+      stripe.createToken(card).then(function (stripeResult) {
+        if (stripeResult.error) {
+          document.getElementById('card-errors').textContent = stripeResult.error.message
         } else {
-          // console.log(result)
-          // stripeTokenHandler(result.token)
+          var body = {
+            customer: result.id,
+            token: stripeResult.token
+          }
+          fetch('https://actions.proux.net/payment', {
+            credentials: 'include',
+            method: 'POST',
+            body:    JSON.stringify(body),
+            headers: { 'Content-Type': 'application/json' }
+          })
+            .then(function (result) { return result.json() })
+            .then(function (result) {
+              console.log(result)
+            })
         }
       });
     });
