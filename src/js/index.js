@@ -176,7 +176,7 @@ fetch('https://data.proux.net', {credentials: 'include'})
         } else {
           var body = {
             customer: result.id,
-            token: stripeResult.token
+            token: stripeResult.token.id
           }
           fetch('https://actions.proux.net/payment', {
             credentials: 'include',
