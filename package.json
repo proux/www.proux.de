@@ -19,7 +19,7 @@
     "postcss-load-config": "^1.2.0",
     "pug-cli": "^1.0.0-alpha6",
     "paymentfont": "^1.2.5",
-    "semantic-release": "^11.0.2"
+    "semantic-release": "^12.2.2"
   },
   "private": true,
   "scripts": {
