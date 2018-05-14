@@ -10,6 +10,7 @@ notifications:
       secure: iu7Lfy20XWeN4x2TNIFA+ozQQq2Uewi9txnQKOvoyWsx7gM1YP2xVZSh6ZAiZpAXCjvsOYpeM/2c7j5FeVc1PONjJMrXJ2bwdKSNmFV5hGxJ8cb92Sjl6t3/W6826+MDQWaJvwwqtV/dJBjHwZ4UjEkrauFGiGZCnJRIet3bH4I=
 node_js:
 - '4'
+- '10'
 before_install:
 - npm i -g npm@^2.0.0
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget -qO- https://github.com/lukasmartinelli/hadolint/releases/download/v1.2.1/hadolint_darwin_amd64 > hadolint; fi
