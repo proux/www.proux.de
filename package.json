@@ -6,7 +6,7 @@
     "@proux/logo": "git+https://git@github.com/proux/logo.git",
     "@semantic-release/release-notes-generator": "^6.0.5",
     "bootstrap": "^3.3.7",
-    "cpy-cli": "^1.0.1",
+    "cpy-cli": "^2.0.0",
     "cz-conventional-changelog": "^2.0.0",
     "font-awesome": "^4.7.0",
     "font-mfizz": "git+https://git@github.com/fizzed/font-mfizz",
