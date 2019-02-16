@@ -15,7 +15,7 @@
     "postcss-cli": "6.0.1",
     "postcss-copy": "^7.0.0",
     "postcss-import": "^12.0.0",
-    "postcss-import-url": "^3.0.4",
+    "postcss-import-url": "^4.0.0",
     "postcss-load-config": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "paymentfont": "^1.2.5",
