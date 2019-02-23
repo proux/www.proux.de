@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "alias": [
+        "www.proux.net",
+        "www.proux.de"
+        ],
+	"builds": [
+		{ "src": "package.json", "use": "@now/static-build" }
+  	]
+  }

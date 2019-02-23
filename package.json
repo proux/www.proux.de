@@ -1,34 +1,13 @@
 {
   "name": "@proux/www",
   "description": "proux website",
-  "devDependencies": {
-    "@nulliel/last-release-git-tag": "^1.0.1",
-    "@proux/logo": "git+https://git@github.com/proux/logo.git",
-    "@semantic-release/release-notes-generator": "^4.0.0",
-    "bootstrap": "^3.3.7",
-    "cpy-cli": "^1.0.1",
-    "cz-conventional-changelog": "^2.0.0",
-    "font-awesome": "^4.7.0",
-    "font-mfizz": "git+https://git@github.com/fizzed/font-mfizz",
-    "node-static": "^0.7.9",
-    "postcss": "^6.0.5",
-    "postcss-cli": "4.1.1",
-    "postcss-copy": "^7.0.0",
-    "postcss-import": "^11.0.0",
-    "postcss-import-url": "^2.2.0",
-    "postcss-load-config": "^1.2.0",
-    "pug-cli": "^1.0.0-alpha6",
-    "paymentfont": "^1.2.5",
-    "semantic-release": "^8.0.0"
-  },
   "private": true,
   "scripts": {
-    "build": "npm run postcss && npm run pug && npm run copy",
-    "postcss": "postcss src/css/style.css --config postcss.config.js -o dist/css/style.css --no-map",
-    "pug": "pug src/views --out dist",
-    "copy": "cpy src/assets/favicon.ico dist/assets/ && cpy src/js/* dist/js/",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "now-build": "next build && next export -o dist",
     "test": "exit 0",
-    "start": "static -a 0.0.0.0 -p 8080 dist",
     "semantic-release": "semantic-release pre && semantic-release post"
   },
   "repository": {
@@ -49,5 +28,23 @@
   "release": {
     "getLastRelease": "./node_modules/@nulliel/last-release-git-tag",
     "generateNotes": "./node_modules/@semantic-release/release-notes-generator/dist"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@nulliel/last-release-git-tag": "^1.0.1",
+    "@proux/logo": "git+https://git@github.com/proux/logo.git",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "@zeit/next-css": "^1.0.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "next": "^8.0.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "semantic-release": "^15.13.3"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.1"
   }
 }

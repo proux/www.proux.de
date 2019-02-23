@@ -79,3 +79,5 @@ jspm_packages
 dist/
 /package-lock.json
 /.idea/
+/.next/
+*.lock
