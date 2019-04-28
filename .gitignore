@@ -82,4 +82,4 @@ dist/
 /.next/
 *.lock
 
-/static/fonts/
+/static/fonts/*.woff2
