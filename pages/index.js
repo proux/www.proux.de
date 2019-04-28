@@ -1,15 +1,16 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faComment, faCode, faTasks, 
-    faMoneyBill, faBullhorn, faBalanceScale, 
-    faPenSquare, faTag, faHome, faPhone, 
+import { faHeart, faComment, faCode, faTasks,
+    faMoneyBill, faBullhorn, faBalanceScale,
+    faPenSquare, faTag, faHome, faPhone,
     faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithub, faFacebookF, faCodepen,
-    faDocker, faJs, faNodeJs, faHtml5, faCss3, 
+    faDocker, faJs, faNodeJs, faHtml5, faCss3,
     faGit } from '@fortawesome/free-brands-svg-icons'
 import Logo from '@proux/logo/logo.svg'
 import Head from 'next/head';
 import "../style.css"
+import '../static/fonts/fonts.css'
 
 export default () => {
     return <div>

@@ -26,6 +26,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@proux/logo": "git+https://git@github.com/proux/logo.git",
     "@zeit/next-css": "^1.0.1",
+    "get-google-fonts": "^1.1.3",
     "next": "^8.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2"
