@@ -10,24 +10,26 @@
 			"assets": {
 				"ios6AndPriorIcons": true,
 				"ios7AndLaterIcons": true,
-				"precomposedIcons": false,
+				"precomposedIcons": true,
 				"declareOnlyDefaultIcon": true
-			}
+			},
+			"appName": "Proux"
 		},
 		"desktopBrowser": {},
 		"windows": {
 			"pictureAspect": "whiteSilhouette",
-			"backgroundColor": "#2b5797",
+			"backgroundColor": "#366fa5",
 			"onConflict": "override",
 			"assets": {
 				"windows80Ie10Tile": true,
 				"windows10Ie11EdgeTiles": {
-					"small": false,
+					"small": true,
 					"medium": true,
-					"big": false,
-					"rectangle": false
+					"big": true,
+					"rectangle": true
 				}
-			}
+			},
+			"appName": "Proux"
 		},
 		"androidChrome": {
 			"pictureAspect": "backgroundAndMargin",
@@ -35,13 +37,14 @@
 			"backgroundColor": "#ffffff",
 			"themeColor": "#ffffff",
 			"manifest": {
+				"name": "Proux",
 				"display": "standalone",
 				"orientation": "notSet",
 				"onConflict": "override",
 				"declared": true
 			},
 			"assets": {
-				"legacyIcon": true,
+				"legacyIcon": false,
 				"lowResolutionIcons": true
 			}
 		},
