@@ -7,7 +7,7 @@
     "builds": [
         {
             "src": "package.json",
-            "use": "@now/next"
+            "use": "@now/static-build"
         }
     ],
     "routes": [
