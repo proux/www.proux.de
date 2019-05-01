@@ -352,12 +352,6 @@ header p {
 	box-sizing: border-box
 }
 
-::-moz-selection, ::selection {
-	background: #366fa5;
-	color: #fff;
-	text-shadow: none
-}
-
 @media (min-width:768px) {
 	.container {
 		width: 750px
