@@ -187,16 +187,6 @@ body, html {
 	height: 100%
 }
 
-hr:before {
-	background: #ccc;
-	content: " ";
-	height: 2px;
-	left: 25%;
-	position: absolute;
-	top: 0;
-	width: 50%
-}
-
 .divider2 a {
 	color: #fff
 }
