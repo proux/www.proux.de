@@ -16,7 +16,15 @@ export default () => {
     return <div>
         <Head>
             <title>proux.net</title>
-            <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
+            <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/favicon-16x16.png"/>
+            <link rel="manifest" href="../static/assets/site.webmanifest"/>
+            <link rel="mask-icon" href="../static/assets/safari-pinned-tab.svg" color="#366fa5"/>
+            <link rel="shortcut icon" href="../static/assets/favicon.ico"/>
+            <meta name="msapplication-TileColor" content="#2b5797"/>
+            <meta name="msapplication-config" content="../static/assets/browserconfig.xml"/>
+            <meta name="theme-color" content="#ffffff"></meta>
         </Head>
         <nav className="navbar navbar-inverse navbar-fixed-top">
             <div className="container">
@@ -155,7 +163,7 @@ export default () => {
         <div id="footerwrap">
             <div className="container">
                 <div className="row">
-                    <h6>&copy; Copyright 2017</h6>
+                    <h6>&copy; Copyright 2019</h6>
                 </div>
             </div>
         </div>

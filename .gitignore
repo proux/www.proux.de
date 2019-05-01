@@ -83,3 +83,6 @@ dist/
 *.lock
 
 /static/fonts/*.woff2
+/static/assets/*
+!/static/assets/backgrounds
+faviconData.json
