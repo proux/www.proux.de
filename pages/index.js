@@ -26,7 +26,7 @@ export default () => {
                 </ul>
             </div>
         </nav>
-        <header className="bgImage">
+        <header>
             <Logo id="prouxLogo"/>
             <p>Web Consulting.</p>
             <p>Web Solutions.</p>
