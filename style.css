@@ -781,7 +781,7 @@ a:before {
 }
 
 header {
-	margin-top: -50px;
+	margin-top: 50px;
 	padding-top: 290px;
 	text-align: center;
 	background-repeat: no-repeat;
@@ -794,8 +794,14 @@ header {
 	background-size: cover
 }
 
+@media (min-width:768px) {
+	header {
+		margin-top: -50px;
+	}
+}
+
 header.bgImage {
-	background-image: url(/static/assets/bg1.jpg)
+	background-image: url(/static/assets/backgrounds/bg1.jpg)
 }
 
 header p {
@@ -890,12 +896,12 @@ h2 {
 }
 
 .divider1 {
-	background-image: url(/static/assets/bg2.jpg);
+	background-image: url(/static/assets/backgrounds/bg2.jpg);
 	padding-top: 70px
 }
 
 .divider2 {
-	background-image: url(/static/assets/bg3.jpg);
+	background-image: url(/static/assets/backgrounds/bg3.jpg);
 	padding-top: 110px;
 	padding-bottom: 110px
 }
