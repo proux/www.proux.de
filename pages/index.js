@@ -17,15 +17,6 @@ export default () => {
         <Head>
           <title>proux</title>
         </Head>
-        <nav className="navbar navbar-inverse navbar-fixed-top">
-            <div className="container">
-                <ul className="nav navbar-nav">
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#technologie">Technologie</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </div>
-        </nav>
         <header>
             <Logo id="prouxLogo"/>
             <p>Web Consulting.</p>

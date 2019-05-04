@@ -19,7 +19,7 @@ body {
 	margin: 0
 }
 
-header, nav, section {
+header, section {
 	display: block
 }
 
@@ -112,74 +112,12 @@ ul {
 	position: relative
 }
 
-.nav {
-	list-style: none;
-	margin-bottom: 0;
-	padding-left: 0
-}
-
-.nav>li {
-	display: block;
-	position: relative
-}
-
-.nav>li>a {
-	display: block;
-	padding: 10px 15px;
-	position: relative
-}
-
-.nav>li>a:focus, .nav>li>a:hover {
-	background-color: #eee;
-	text-decoration: none
-}
-
-.navbar {
-	border: 1px solid transparent;
-	margin-bottom: 20px;
-	min-height: 50px;
-	position: relative
-}
-
-.navbar-fixed-top {
-	border-width: 0 0 1px;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1030
-}
-
-.navbar-nav {
-	margin: 7.5px -15px
-}
-
-.navbar-nav>li>a {
-	line-height: 20px;
-	padding-bottom: 10px;
-	padding-top: 10px
-}
-
-.navbar-inverse {
-	background-color: #222;
-	border-color: #080808
-}
-
-.navbar-inverse .navbar-nav>li>a {
-	color: #9d9d9d
-}
-
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-	background-color: transparent;
-	color: #fff
-}
-
-.container:after, .container:before, .nav:after, .nav:before, .navbar:after, .navbar:before, .row:after, .row:before {
+.container:after, .container:before, .row:after, .row:before {
 	content: " ";
 	display: table
 }
 
-.container:after, .nav:after, .navbar:after, .row:after {
+.container:after, .row:after {
 	clear: both
 }
 
@@ -355,23 +293,6 @@ header p {
 @media (min-width:768px) {
 	.container {
 		width: 750px
-	}
-	.navbar {
-		border-radius: 4px
-	}
-	.navbar-fixed-top {
-		border-radius: 0
-	}
-	.navbar-nav {
-		float: left;
-		margin: 0
-	}
-	.navbar-nav>li {
-		float: left
-	}
-	.navbar-nav>li>a {
-		padding-bottom: 15px;
-		padding-top: 15px
 	}
 	header {
 		margin-top: -50px
