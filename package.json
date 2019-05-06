@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "now-build": "npm run build && next export -o dist",
-    "test": "exit 0"
+    "test": "exit 0",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -33,10 +35,16 @@
     "next": "^8.0.1",
     "next-offline": "^3.3.8",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "snyk": "^1.161.1"
   },
   "babel": {
-    "presets": [ "next/babel" ],
-    "plugins": [ "inline-react-svg" ]
-  }
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "inline-react-svg"
+    ]
+  },
+  "snyk": true
 }
