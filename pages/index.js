@@ -41,8 +41,8 @@ const socialIcons = [
   }
 ]
 
-const socialIcon = (obj) => (
-  <li>
+const socialIcon = (obj, i) => (
+  <li key={i}>
     <a href={obj.link} aria-label={'proux ' + obj.label}>
       <FontAwesomeIcon size='2x' icon={obj.icon} />
     </a>
@@ -80,7 +80,7 @@ export default () => {
       <title>proux</title>
     </Head>
     <header>
-      <Logo class='prouxLogo' />
+      <Logo className='prouxLogo' />
       <p>Web Consulting.</p>
       <p>Web Solutions.</p>
     </header>
@@ -95,7 +95,7 @@ export default () => {
         </div>
       </div>
     </div>
-    <div class='greywrap'>
+    <div className='greywrap'>
       <div className='container'>
         <div className='row'>
           {serviceIcons.map(serviceIcon).concat('')}
@@ -113,7 +113,7 @@ export default () => {
         </div>
       </div>
     </section>
-    <div style={{ paddingTop: '40px', textAlign: 'center' }} class='indented'>
+    <div style={{ paddingTop: '40px', textAlign: 'center' }} className='indented'>
       <div className='container'>
         <div className='row white'>
           <h2>AKTUELLE TECHNOLOGIEN</h2>
@@ -136,7 +136,7 @@ export default () => {
         </div>
       </div>
     </section>
-    <div class='footer' style={{ marginBottom: '75px', paddingTop: '40px' }}>
+    <div className='footer' style={{ marginBottom: '75px', paddingTop: '40px' }}>
       <div className='container'>
         <div className='row'>
           <h2>KONTAKT</h2>
@@ -156,7 +156,7 @@ export default () => {
         </div>
       </div>
     </div>
-    <div class='footerwrap'>
+    <div className='footerwrap'>
       <div className='container'>
         <div className='row'>
           <h6>&copy; Copyright 2019</h6>

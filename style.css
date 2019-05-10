@@ -53,9 +53,14 @@ hr {
 }
 
 svg {
+  overflow: hidden;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
+}
+
+svg:root {
+  overflow: visible;
 }
 
 a:focus,
