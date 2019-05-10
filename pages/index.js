@@ -12,13 +12,50 @@ import Head from 'next/head'
 import '../style.css'
 import '../static/fonts/fonts.css'
 
+const techIcon = (icon) => (
+  <div className='col-lg-2'>
+    <FontAwesomeIcon size='4x' icon={icon} />
+  </div>
+)
+
+const socialIcons = [
+  {
+    icon: faTwitter,
+    link: 'https://twitter.com/prouxnet',
+    label: 'twitter account'
+  },
+  {
+    icon: faGithub,
+    link: 'https://github.com/proux',
+    label: 'github account'
+  },
+  {
+    icon: faCodepen,
+    link: 'https://codepen.io/proux',
+    label: 'codepen account'
+  },
+  {
+    icon: faFacebookF,
+    link: 'https://www.facebook.com/proux.net',
+    label: 'facebook account'
+  }
+]
+
+const socialIcon = (obj) => (
+  <li>
+    <a href={obj.link} aria-label={'proux ' + obj.label}>
+      <FontAwesomeIcon size='2x' icon={obj.icon} />
+    </a>
+  </li>
+)
+
 export default () => {
   return <div>
     <Head>
       <title>proux</title>
     </Head>
     <header>
-      <Logo id='prouxLogo' />
+      <Logo class='prouxLogo' />
       <p>Web Consulting.</p>
       <p>Web Solutions.</p>
     </header>
@@ -54,8 +91,8 @@ export default () => {
     <section className='section-divider textdivider divider1 indented'>
       <div className='container'>
         <div className='row'>
-          <h2>&raquo;SOFTWARE IS LIKE SEX:</h2>
-          <h2>IT&apos;S BETTER WHEN IT&apos;S FREE.&laquo;</h2>
+          <h3>&raquo;SOFTWARE IS LIKE SEX:</h3>
+          <h3>IT&apos;S BETTER WHEN IT&apos;S FREE.&laquo;</h3>
           <p><i>Linus Torvalds</i></p>
           <hr />
           <p>Wir glauben an die Open Source Idee und handeln auch nach dieser.</p>
@@ -67,24 +104,7 @@ export default () => {
         <div className='row white'>
           <h2>AKTUELLE TECHNOLOGIEN</h2>
           <hr />
-          <div className='col-lg-2'>
-            <FontAwesomeIcon size='4x' icon={faNodeJs} />
-          </div>
-          <div className='col-lg-2'>
-            <FontAwesomeIcon size='4x' icon={faGit} />
-          </div>
-          <div className='col-lg-2'>
-            <FontAwesomeIcon size='4x' icon={faDocker} />
-          </div>
-          <div className='col-lg-2'>
-            <FontAwesomeIcon size='4x' icon={faHtml5} />
-          </div>
-          <div className='col-lg-2'>
-            <FontAwesomeIcon size='4x' icon={faCss3} />
-          </div>
-          <div className='col-lg-2'>
-            <FontAwesomeIcon size='4x' icon={faJs} />
-          </div>
+          {[faNodeJs, faGit, faDocker, faHtml5, faCss3, faJs].map(techIcon).concat()}
           <div className='col-lg-12'>
             <p>Wir setzen aktuell prim&auml;r node.js als Programmiersprache ein, und um Infrastruktur in beliebiger Gr&ouml;&szlig;e zur Verf&uuml;gung stellen zu k&ouml;nnen, arbeiten wir mit einfachen, modernen L&ouml;sungen wie git und Docker. Bei den sichtbaren Ergebnissen unserer Systeme setzen wir auf die modernsten Standards und haben dennoch stets die entsprechenden Zielgruppen im Blick.</p>
           </div>
@@ -94,30 +114,10 @@ export default () => {
     <section className='section-divider textdivider divider2'>
       <div className='container'>
         <div className='row'>
-          <h2>AUS HAMBURG MIT <FontAwesomeIcon icon={faHeart} />
-          </h2>
+          <h3>AUS HAMBURG MIT <FontAwesomeIcon icon={faHeart} /></h3>
           <hr />
-          <ul>
-            <li>
-              <a href='https://twitter.com/prouxnet' aria-label='proux twitter account'>
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            </li>
-            <li>
-              <a href='https://github.com/proux' aria-label='proux github account'>
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-            <li>
-              <a href='https://codepen.io/proux' aria-label='proux codepen account'>
-                <FontAwesomeIcon icon={faCodepen} />
-              </a>
-            </li>
-            <li>
-              <a href='https://www.facebook.com/proux.net' aria-label='proux facebook account'>
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-            </li>
+          <ul style={{ marginBottom: '25px' }}>
+            {socialIcons.map(socialIcon).concat('')}
           </ul>
         </div>
       </div>

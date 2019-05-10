@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "now-build": "npm run build && next export -o dist",
-    "test": "stylelint style.css && standard --fix",
+    "test": "stylelint style.css && standard && csslint --ignore=box-sizing style.css",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -31,6 +31,7 @@
     "@zeit/next-css": "^1.0.1",
     "babel-plugin-inline-react-svg": "^1.1.0",
     "cli-real-favicon": "0.0.7",
+    "csslint": "^1.0.5",
     "get-google-fonts": "^1.1.3",
     "next": "^8.0.1",
     "next-offline": "^3.3.8",
@@ -52,5 +53,8 @@
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
+  "ignore": [
+    "box-model"
+  ],
   "snyk": true
 }
