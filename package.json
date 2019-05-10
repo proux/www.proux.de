@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "now-build": "npm run build && next export -o dist",
-    "test": "exit 0"
+    "test": "stylelint style.css && standard --fix"
   },
   "repository": {
     "type": "git",
@@ -33,10 +33,20 @@
     "next": "^8.0.1",
     "next-offline": "^3.3.8",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "standard": "^12.0.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   },
   "babel": {
-    "presets": [ "next/babel" ],
-    "plugins": [ "inline-react-svg" ]
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "inline-react-svg"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
   }
 }
