@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='de'>
         <Head>
-          <meta charset='utf-8' />
           <meta name='msapplication-TileColor' content='#2b5797' />
           <meta name='msapplication-config' content='/static/assets/browserconfig.xml' />
           <meta name='theme-color' content='#ffffff' />

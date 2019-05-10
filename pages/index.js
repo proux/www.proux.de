@@ -80,7 +80,7 @@ export default () => {
       <title>proux</title>
     </Head>
     <header>
-      <Logo className='prouxLogo' alt='proux' />
+      <Logo className='prouxLogo' role='img' aria-label='proux logo' />
       <h1>Web Consulting.</h1>
       <h1>Web Solutions.</h1>
     </header>
