@@ -53,10 +53,10 @@ hr {
 }
 
 svg {
-  overflow: hidden;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
+  overflow: hidden;
 }
 
 svg:root {
