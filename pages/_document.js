@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 export default class MyDocument extends Document {
   render () {
     return (
-      <Html lang='de'>
+      <Html lang='de' style={{ height: '100%', width: '100%' }}>
         <Head>
           <meta name='msapplication-TileColor' content='#2b5797' />
           <meta name='msapplication-config' content='/static/assets/browserconfig.xml' />
@@ -17,9 +17,16 @@ export default class MyDocument extends Document {
           <link rel='manifest' href='/static/assets/site.webmanifest' />
           <link rel='mask-icon' href='/static/assets/safari-pinned-tab.svg' color='#366fa5' />
           <link rel='shortcut icon' href='/static/assets/favicon.ico' />
+          <style jsx global>{`
+            h1 { color: #fff; }
+            .prouxLogo path { fill: #fff; }
+            #__next { height: 100%; width: 100%; }
+            svg { overflow: hidden; }
+            svg:root { overflow: visible; }
+          `}</style>
         </Head>
-        <body>
-          <Main />
+        <body style={{ height: '100%', width: '100%', margin: '0' }}>
+          <Main style={{ height: '100%', width: '100%' }} />
           <NextScript />
         </body>
       </Html>

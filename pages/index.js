@@ -79,7 +79,7 @@ export default () => {
     <Head>
       <title>proux</title>
     </Head>
-    <header>
+    <header style={{ backgroundColor: '#1c1f3b', minHeight: '650px', paddingTop: '270px', textAlign: 'center', width: '100%' }}>
       <Logo className='prouxLogo' role='img' aria-label='proux logo' />
       <h1>Web Consulting.</h1>
       <h1>Web Solutions.</h1>
@@ -102,7 +102,7 @@ export default () => {
         </div>
       </div>
     </div>
-    <section className='section-divider textdivider divider1 indented'>
+    <section className='section-divider textdivider divider1 indented' style={{ backgroundColor: '#060708' }}>
       <div className='container'>
         <div className='row'>
           <h3>&raquo;SOFTWARE IS LIKE SEX:</h3>
@@ -125,7 +125,7 @@ export default () => {
         </div>
       </div>
     </div>
-    <section className='section-divider textdivider divider2'>
+    <section className='section-divider textdivider divider2' style={{ backgroundColor: '#38230c' }}>
       <div className='container'>
         <div className='row'>
           <h3>AUS HAMBURG MIT <FontAwesomeIcon icon={faHeart} /></h3>
