@@ -1,6 +1,5 @@
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: italic;
   font-weight: 300;
@@ -9,7 +8,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: italic;
   font-weight: 300;
@@ -18,7 +16,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
@@ -27,7 +24,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
@@ -36,7 +32,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -45,7 +40,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -54,7 +48,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -63,7 +56,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -72,7 +64,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 300;
@@ -81,7 +72,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 300;
@@ -90,7 +80,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 400;
@@ -99,7 +88,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: italic;
   font-weight: 400;
@@ -108,7 +96,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 300;
@@ -117,7 +104,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 300;
@@ -126,7 +112,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
@@ -135,7 +120,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
@@ -144,7 +128,6 @@
 }
 /* latin-ext */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -153,7 +136,6 @@
 }
 /* latin */
 @font-face {
-  font-display: auto;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
