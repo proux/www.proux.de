@@ -52,6 +52,12 @@ hr {
   position: relative;
 }
 
+svg {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
 a:focus,
 a:hover {
   color: #366fa5;
@@ -104,11 +110,6 @@ ul {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 .col-lg-12,
@@ -262,12 +263,8 @@ header p {
 
 .divider2 {
   background-image: url(/static/assets/backgrounds/bg3.jpg);
-  padding: 110px 15px;
-}
-
-.indented {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-bottom: 110px;
+  padding-top: 110px;
 }
 
 .prouxLogo {

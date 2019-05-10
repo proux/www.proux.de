@@ -8,6 +8,9 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+index_exclude_patterns = {
+   .svn, .git, .hg, .tmp, node_modules, CVS, static
+}
 
 # Use 4 spaces for the Python files
 [*.py]
