@@ -12,6 +12,8 @@ plugins:
         enabled: false
       bulletproof-font-face:
         enabled: false
+      known-properties:
+        enabled: false
   editorconfig:
     enabled: true
     channel: beta
