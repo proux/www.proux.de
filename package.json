@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "now-build": "npm run build && next export -o dist",
-    "test": "stylelint style.css && standard && csslint --ignore=box-sizing style.css",
+    "test": "stylelint style.css static/**/*.css && standard && csslint --ignore=box-sizing style.css static/**/*.css",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -51,10 +51,10 @@
     ]
   },
   "stylelint": {
-    "extends": "stylelint-config-standard"
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "comment-empty-line-before": null
+    }
   },
-  "ignore": [
-    "box-model"
-  ],
   "snyk": true
 }
