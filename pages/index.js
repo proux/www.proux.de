@@ -12,8 +12,8 @@ import Head from 'next/head'
 import '../style.css'
 import '../static/fonts/fonts.css'
 
-const techIcon = (icon) => (
-  <div className='col-lg-2'>
+const techIcon = (icon, i) => (
+  <div className='col-lg-2' key={i}>
     <FontAwesomeIcon size='4x' icon={icon} />
   </div>
 )
@@ -67,8 +67,8 @@ const serviceIcons = [
   }
 ]
 
-const serviceIcon = (obj) => (
-  <div className='col-lg-4'><FontAwesomeIcon icon={obj.icon} size='4x' />
+const serviceIcon = (obj, i) => (
+  <div className='col-lg-4' key={i}><FontAwesomeIcon icon={obj.icon} size='4x' />
     <h2>{obj.title}</h2>
     <p>{obj.text}</p>
   </div>
@@ -80,9 +80,9 @@ export default () => {
       <title>proux</title>
     </Head>
     <header>
-      <Logo className='prouxLogo' />
-      <p>Web Consulting.</p>
-      <p>Web Solutions.</p>
+      <Logo className='prouxLogo' alt='proux' />
+      <h1>Web Consulting.</h1>
+      <h1>Web Solutions.</h1>
     </header>
     <div id='service'>
       <div className='container'>
@@ -107,7 +107,7 @@ export default () => {
         <div className='row'>
           <h3>&raquo;SOFTWARE IS LIKE SEX:</h3>
           <h3>IT&apos;S BETTER WHEN IT&apos;S FREE.&laquo;</h3>
-          <p><i>Linus Torvalds</i></p>
+          <h4>Linus Torvalds</h4>
           <hr />
           <p>Wir glauben an die Open Source Idee und handeln auch nach dieser.</p>
         </div>
@@ -159,7 +159,7 @@ export default () => {
     <div className='footerwrap'>
       <div className='container'>
         <div className='row'>
-          <h6>&copy; Copyright 2019</h6>
+          <small>&copy; Copyright 2019</small>
         </div>
       </div>
     </div>

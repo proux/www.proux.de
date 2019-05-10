@@ -31,7 +31,8 @@ const nextConfig = {
 
 new GetGoogleFonts({
   outputDir: './static/fonts',
-  path: '/static/fonts/'
+  path: '/static/fonts/',
+  overwriting: true
 }).download([
   {
     Lato: [300, '300i', 400, 700],
