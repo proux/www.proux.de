@@ -1,0 +1,14 @@
+version: "2"
+plugins:
+  eslint:
+    enabled: true
+    channel: "eslint-5"
+    config:
+      config: .eslintrc
+  csslint:
+    enabled: true
+    checks:
+      box-sizing:
+        enabled: false
+      bulletproof-font-face:
+        enabled: false

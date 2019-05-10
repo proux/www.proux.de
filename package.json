@@ -3,12 +3,14 @@
   "description": "proux website",
   "private": true,
   "scripts": {
+    "prebuild": "real-favicon generate faviconDescription.json faviconData.json static/assets",
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "now-build": "next build && next export -o dist",
-    "test": "exit 0",
-    "semantic-release": "semantic-release pre && semantic-release post"
+    "now-build": "npm run build && next export -o dist",
+    "test": "stylelint style.css static/**/*.css && standard && csslint --ignore=box-sizing style.css static/**/*.css",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -20,31 +22,39 @@
     "url": "https://github.com/proux/www/issues"
   },
   "homepage": "https://github.com/proux/www#readme",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "release": {
-    "getLastRelease": "./node_modules/@nulliel/last-release-git-tag",
-    "generateNotes": "./node_modules/@semantic-release/release-notes-generator/dist"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "@nulliel/last-release-git-tag": "^1.0.1",
     "@proux/logo": "git+https://git@github.com/proux/logo.git",
-    "@semantic-release/release-notes-generator": "^7.1.4",
     "@zeit/next-css": "^1.0.1",
-    "cz-conventional-changelog": "^2.1.0",
+    "babel-plugin-inline-react-svg": "^1.1.0",
+    "cli-real-favicon": "0.0.7",
+    "csslint": "^1.0.5",
+    "get-google-fonts": "^1.1.3",
     "next": "^8.0.1",
+    "next-offline": "^3.3.8",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "semantic-release": "^15.13.3"
+    "snyk": "^1.161.1",
+    "standard": "^12.0.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0"
   },
-  "devDependencies": {
-    "babel-plugin-inline-react-svg": "^1.0.1"
-  }
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "inline-react-svg"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "comment-empty-line-before": null
+    }
+  },
+  "snyk": true
 }
