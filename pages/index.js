@@ -49,6 +49,31 @@ const socialIcon = (obj) => (
   </li>
 )
 
+const serviceIcons = [
+  {
+    icon: faComment,
+    title: 'Consulting',
+    text: 'Wir beraten Sie zu jedem Aspekt eines bestehenden oder zukünftigen Web-Systems in beliebiger Komplexität.'
+  },
+  {
+    icon: faCode,
+    title: 'Development',
+    text: 'Wir übernehmen oder vermitteln die Entwicklung oder Anpassung nötiger Software für Ihr Projekt mit höchstem Qualitätsanspruch.'
+  },
+  {
+    icon: faTasks,
+    title: 'Infrastruktur',
+    text: 'Die skalierbare und ausfallsichere Infrastruktur und ihr Betrieb bildet das Fundament, ein Web-System erfolgreich zu betreiben.'
+  }
+]
+
+const serviceIcon = (obj) => (
+  <div className='col-lg-4'><FontAwesomeIcon icon={obj.icon} size='4x' />
+    <h2>{obj.title}</h2>
+    <p>{obj.text}</p>
+  </div>
+)
+
 export default () => {
   return <div>
     <Head>
@@ -73,18 +98,7 @@ export default () => {
     <div class='greywrap'>
       <div className='container'>
         <div className='row'>
-          <div className='col-lg-4'><FontAwesomeIcon icon={faComment} size='4x' />
-            <h2>Consulting</h2>
-            <p>Wir beraten Sie zu jedem Aspekt eines bestehenden oder zuk&uuml;nftigen Web-Systems in beliebiger Komplexit&auml;t.</p>
-          </div>
-          <div className='col-lg-4'><FontAwesomeIcon icon={faCode} size='4x' />
-            <h2>Development</h2>
-            <p>Wir &uuml;bernehmen oder vermitteln die Entwicklung oder Anpassung n&ouml;tiger Software f&uuml;r Ihr Projekt mit h&ouml;chstem Qualit&auml;tsanspruch.</p>
-          </div>
-          <div className='col-lg-4'><FontAwesomeIcon icon={faTasks} size='4x' />
-            <h2>Infrastruktur</h2>
-            <p>Die skalierbare und ausfallsichere Infrastruktur und ihr Betrieb bildet das Fundament, ein Web-System erfolgreich zu betreiben.</p>
-          </div>
+          {serviceIcons.map(serviceIcon).concat('')}
         </div>
       </div>
     </div>
