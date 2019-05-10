@@ -1,21 +1,13 @@
 # http://editorconfig.org
 root = true
 
-[*]
+[*.{js,css}]
 indent_style = space
 indent_size = 2
 end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-
-[/static/**]
-charset = none
-end_of_line = none
-insert_final_newline = none
-trim_trailing_whitespace = none
-indent_style = none
-indent_size = none
 
 # Use 4 spaces for the Python files
 [*.py]
