@@ -43,7 +43,7 @@ const socialIcons = [
 
 const socialIcon = (obj, i) => (
   <li key={i}>
-    <a href={obj.link} aria-label={'proux ' + obj.label} style={{'color': '#fff'}}>
+    <a href={obj.link} target='_blank' rel='noopener' aria-label={'proux ' + obj.label} style={{'color': '#fff'}}>
       <FontAwesomeIcon size='2x' icon={obj.icon} />
     </a>
   </li>
@@ -135,7 +135,7 @@ export default () => {
         </div>
       </div>
     </section>
-    <div className='footer' style={{ marginBottom: '75px', paddingTop: '40px' }}>
+    <div className='footer' style={{ marginBottom: '75px', paddingTop: '75px', paddingBottom: '25px' }}>
       <div className='container'>
         <div className='row'>
           <h2>KONTAKT</h2>
