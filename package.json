@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "now-build": "npm run build && next export -o dist",
-    "test": "stylelint style.css && standard && csslint --ignore=box-sizing style.css",
+    "test": "stylelint style.css && standard --fix && csslint --ignore=box-sizing style.css",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect",
     "a11y": "pa11y http://localhost:3000"

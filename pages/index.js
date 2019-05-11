@@ -43,7 +43,7 @@ const socialIcons = [
 
 const socialIcon = (obj, i) => (
   <li key={i}>
-    <a href={obj.link} target='_blank' rel='noopener' aria-label={'proux ' + obj.label} style={{'color': '#fff'}}>
+    <a href={obj.link} target='_blank' rel='noopener' aria-label={'proux ' + obj.label} style={{ 'color': '#fff' }}>
       <FontAwesomeIcon size='2x' icon={obj.icon} />
     </a>
   </li>
@@ -81,7 +81,7 @@ export default () => {
     </Head>
     <header style={{ backgroundColor: '#1c1f3b', minHeight: '650px', paddingTop: '270px', textAlign: 'center', width: '100%' }}>
       <Logo className='prouxLogo' role='img' aria-label='proux logo' />
-      <h1 style={{'color': '#fff'}}>Web Consulting.<br/>Web Solutions.</h1>
+      <h1 className='headerText' style={{ 'color': '#fff' }}>Web Consulting.<br />Web Solutions.</h1>
     </header>
     <div id='service'>
       <div className='container'>
