@@ -35,7 +35,7 @@ const ggfOptions = {
   overwriting: true
 }
 
-new GetGoogleFonts(ggfOptions).download('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700&display=auto')
-new GetGoogleFonts(ggfOptions).download('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700&display=auto')
+new GetGoogleFonts(ggfOptions).download('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700&display=fallback')
+new GetGoogleFonts(ggfOptions).download('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700&display=fallback')
 
 module.exports = withOffline(withCSS(nextConfig))
