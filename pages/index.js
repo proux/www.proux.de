@@ -12,7 +12,7 @@ import Head from 'next/head'
 
 const techIcon = (icon, i) => (
   <div className='col-lg-2' key={i}>
-    <FontAwesomeIcon size='4x' icon={icon} />
+    <FontAwesomeIcon size='4x' icon={icon}/>
   </div>
 )
 
@@ -81,6 +81,7 @@ export default () => {
       <link href='/static/style.css' rel='stylesheet' media='screen'/>
     </Head>
     <header style={{ backgroundColor: '#1c1f3b', minHeight: '650px', paddingTop: '270px', textAlign: 'center', width: '100%' }}>
+      <style>{`.prouxLogo path { fill: #fff }`}</style>
       <Logo className='prouxLogo' role='img' aria-label='proux logo' />
       <h1 className='headerText' style={{ 'color': '#fff' }}>Web Consulting.<br />Web Solutions.</h1>
     </header>
