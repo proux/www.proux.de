@@ -12,3 +12,20 @@ plugins:
         enabled: false
       bulletproof-font-face:
         enabled: false
+      known-properties:
+        enabled: false
+  editorconfig:
+    enabled: true
+    channel: beta
+    config:
+      editorconfig: .editorconfig
+  fixme:
+    enabled: true
+  git-legal:
+    enabled: true
+  markdownlint:
+    enabled: true
+  nodesecurity:
+    enabled: true
+  stylelint:
+    enabled: true

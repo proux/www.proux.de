@@ -12,8 +12,8 @@ import Head from 'next/head'
 import '../style.css'
 import '../static/fonts/fonts.css'
 
-const techIcon = (icon) => (
-  <div className='col-lg-2'>
+const techIcon = (icon, i) => (
+  <div className='col-lg-2' key={i}>
     <FontAwesomeIcon size='4x' icon={icon} />
   </div>
 )
@@ -41,12 +41,37 @@ const socialIcons = [
   }
 ]
 
-const socialIcon = (obj) => (
-  <li>
-    <a href={obj.link} aria-label={'proux ' + obj.label}>
+const socialIcon = (obj, i) => (
+  <li key={i}>
+    <a href={obj.link} target='_blank' rel='noopener' aria-label={'proux ' + obj.label} style={{ 'color': '#fff' }}>
       <FontAwesomeIcon size='2x' icon={obj.icon} />
     </a>
   </li>
+)
+
+const serviceIcons = [
+  {
+    icon: faComment,
+    title: 'Consulting',
+    text: 'Wir beraten Sie zu jedem Aspekt eines bestehenden oder zukünftigen Web-Systems in beliebiger Komplexität.'
+  },
+  {
+    icon: faCode,
+    title: 'Development',
+    text: 'Wir übernehmen oder vermitteln die Entwicklung oder Anpassung nötiger Software für Ihr Projekt mit höchstem Qualitätsanspruch.'
+  },
+  {
+    icon: faTasks,
+    title: 'Infrastruktur',
+    text: 'Die skalierbare und ausfallsichere Infrastruktur und ihr Betrieb bildet das Fundament, ein Web-System erfolgreich zu betreiben.'
+  }
+]
+
+const serviceIcon = (obj, i) => (
+  <div className='col-lg-4' key={i}><FontAwesomeIcon icon={obj.icon} size='4x' />
+    <h2>{obj.title}</h2>
+    <p>{obj.text}</p>
+  </div>
 )
 
 export default () => {
@@ -54,10 +79,9 @@ export default () => {
     <Head>
       <title>proux</title>
     </Head>
-    <header>
-      <Logo class='prouxLogo' />
-      <p>Web Consulting.</p>
-      <p>Web Solutions.</p>
+    <header style={{ backgroundColor: '#1c1f3b', minHeight: '650px', paddingTop: '270px', textAlign: 'center', width: '100%' }}>
+      <Logo className='prouxLogo' role='img' aria-label='proux logo' />
+      <h1 className='headerText' style={{ 'color': '#fff' }}>Web Consulting.<br />Web Solutions.</h1>
     </header>
     <div id='service'>
       <div className='container'>
@@ -70,36 +94,25 @@ export default () => {
         </div>
       </div>
     </div>
-    <div class='greywrap'>
+    <div className='greywrap'>
       <div className='container'>
         <div className='row'>
-          <div className='col-lg-4'><FontAwesomeIcon icon={faComment} size='4x' />
-            <h2>Consulting</h2>
-            <p>Wir beraten Sie zu jedem Aspekt eines bestehenden oder zuk&uuml;nftigen Web-Systems in beliebiger Komplexit&auml;t.</p>
-          </div>
-          <div className='col-lg-4'><FontAwesomeIcon icon={faCode} size='4x' />
-            <h2>Development</h2>
-            <p>Wir &uuml;bernehmen oder vermitteln die Entwicklung oder Anpassung n&ouml;tiger Software f&uuml;r Ihr Projekt mit h&ouml;chstem Qualit&auml;tsanspruch.</p>
-          </div>
-          <div className='col-lg-4'><FontAwesomeIcon icon={faTasks} size='4x' />
-            <h2>Infrastruktur</h2>
-            <p>Die skalierbare und ausfallsichere Infrastruktur und ihr Betrieb bildet das Fundament, ein Web-System erfolgreich zu betreiben.</p>
-          </div>
+          {serviceIcons.map(serviceIcon).concat('')}
         </div>
       </div>
     </div>
-    <section className='section-divider textdivider divider1 indented'>
+    <section className='section-divider textdivider divider1 indented' style={{ backgroundColor: '#060708' }}>
       <div className='container'>
         <div className='row'>
           <h3>&raquo;SOFTWARE IS LIKE SEX:</h3>
           <h3>IT&apos;S BETTER WHEN IT&apos;S FREE.&laquo;</h3>
-          <p><i>Linus Torvalds</i></p>
+          <h4>Linus Torvalds</h4>
           <hr />
           <p>Wir glauben an die Open Source Idee und handeln auch nach dieser.</p>
         </div>
       </div>
     </section>
-    <div style={{ paddingTop: '40px', textAlign: 'center' }} class='indented'>
+    <div style={{ paddingTop: '40px', textAlign: 'center' }} className='indented'>
       <div className='container'>
         <div className='row white'>
           <h2>AKTUELLE TECHNOLOGIEN</h2>
@@ -111,7 +124,7 @@ export default () => {
         </div>
       </div>
     </div>
-    <section className='section-divider textdivider divider2'>
+    <section className='section-divider textdivider divider2' style={{ backgroundColor: '#38230c' }}>
       <div className='container'>
         <div className='row'>
           <h3>AUS HAMBURG MIT <FontAwesomeIcon icon={faHeart} /></h3>
@@ -122,7 +135,7 @@ export default () => {
         </div>
       </div>
     </section>
-    <div class='footer' style={{ marginBottom: '75px', paddingTop: '40px' }}>
+    <div className='footer' style={{ marginBottom: '75px', paddingTop: '75px', paddingBottom: '25px' }}>
       <div className='container'>
         <div className='row'>
           <h2>KONTAKT</h2>
@@ -142,10 +155,10 @@ export default () => {
         </div>
       </div>
     </div>
-    <div class='footerwrap'>
+    <div className='footerwrap'>
       <div className='container'>
         <div className='row'>
-          <h6>&copy; Copyright 2019</h6>
+          <small>&copy; Copyright 2019</small>
         </div>
       </div>
     </div>

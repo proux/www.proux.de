@@ -1,7 +1,6 @@
 html {
   color: #222;
   font-family: sans-serif;
-  font-size: 10px;
   -webkit-tap-highlight-color: transparent;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -11,11 +10,10 @@ body {
   background-color: #fff;
   color: #555;
   font-family: Lato, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
   line-height: 1.4;
-  margin: 0;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -27,7 +25,6 @@ section {
 a {
   background-color: transparent;
   color: #366fa5;
-  text-decoration: none;
   word-wrap: break-word;
 }
 
@@ -52,15 +49,33 @@ hr {
   position: relative;
 }
 
+svg {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
 a:focus,
 a:hover {
   color: #366fa5;
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2.5em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 40px;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-top: 0;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+
 h2 {
   color: #555;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: 10px;
@@ -68,25 +83,35 @@ h2 {
   text-align: center;
 }
 
-h6 {
-  color: #fff;
-  font-family: Raleway, sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
 h3 {
   color: #fff;
   font-family: Raleway, sans-serif;
-  font-size: 40px;
+  font-size: 2.5em;
   font-weight: 300;
+  line-height: 1em;
   margin-bottom: 10px;
   margin-top: 20px;
   padding-top: 0;
   text-align: center;
+}
+
+h4 {
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+}
+
+small {
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 p {
@@ -104,11 +129,6 @@ ul {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 .col-lg-12,
@@ -139,15 +159,6 @@ ul {
 .container::after,
 .row::after {
   clear: both;
-}
-
-body,
-html {
-  height: 100%;
-}
-
-.divider2 a {
-  color: #fff;
 }
 
 .divider2 ul {
@@ -182,22 +193,6 @@ header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  min-height: 650px;
-  padding-top: 290px;
-  text-align: center;
-  width: 100%;
-}
-
-header p {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  line-height: 40px;
-  margin-bottom: 0;
-  margin-left: 15px;
-  text-align: center;
-  text-shadow: 1px 1px 1px #000;
 }
 
 .footer p {
@@ -252,7 +247,7 @@ header p {
 
 .textdivider p {
   color: #fff;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 .divider1 {
@@ -262,12 +257,8 @@ header p {
 
 .divider2 {
   background-image: url(/static/assets/backgrounds/bg3.jpg);
-  padding: 110px 15px;
-}
-
-.indented {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-bottom: 110px;
+  padding-top: 110px;
 }
 
 .prouxLogo {
@@ -330,21 +321,9 @@ header p {
   }
 }
 
-@media screen and (max-width: 1050px), screen and (max-device-width: 1050px) {
-  body header {
-    background-attachment: scroll;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  header {
-    background-attachment: scroll;
-  }
-}
-
 @media screen and (max-width: 769px) {
-  header p {
-    font-size: 30px;
+  header .headerText {
+    font-size: 2em;
     line-height: 38px;
   }
 }
