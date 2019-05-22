@@ -9,8 +9,6 @@ import { faTwitter, faGithub, faFacebookF, faCodepen,
   faGit } from '@fortawesome/free-brands-svg-icons'
 import Logo from '@proux/logo/logo.svg'
 import Head from 'next/head'
-import '../style.css'
-import '../static/fonts/fonts.css'
 
 const techIcon = (icon, i) => (
   <div className='col-lg-2' key={i}>
@@ -78,6 +76,9 @@ export default () => {
   return <div>
     <Head>
       <title>proux</title>
+      <link href='/static/fonts/lato.css' rel='stylesheet' media='screen'/>
+      <link href='/static/fonts/roboto.css' rel='stylesheet' media='screen'/>
+      <link href='/static/style.css' rel='stylesheet' media='screen'/>
     </Head>
     <header style={{ backgroundColor: '#1c1f3b', minHeight: '650px', paddingTop: '270px', textAlign: 'center', width: '100%' }}>
       <Logo className='prouxLogo' role='img' aria-label='proux logo' />
