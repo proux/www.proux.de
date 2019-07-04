@@ -1,8 +1,33 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.3
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-AXIOS-174505:
     - cli-real-favicon > rfg-api > axios:
         patched: '2019-05-06T02:31:32.554Z'
+  SNYK-JS-LODASH-450202:
+    - cli-real-favicon > rfg-api > metaparser > async > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > autodll-webpack-plugin > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > styled-jsx > babel-types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > autodll-webpack-plugin > webpack-merge > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/core > @babel/types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/plugin-proposal-class-properties > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/core > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
+    - next > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T02:31:24.805Z'
