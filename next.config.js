@@ -29,15 +29,13 @@ const nextConfig = {
   }
 }
 
-new GetGoogleFonts({
+const ggfOptions = {
   outputDir: './static/fonts',
   path: '/static/fonts/',
   overwriting: true
-}).download([
-  {
-    Lato: [300, '300i', 400, 700],
-    Raleway: [300, '300i', 400, '400i', 700]
-  }
-])
+}
+
+new GetGoogleFonts(ggfOptions).download('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700&display=fallback', { cssFile: 'lato.css' })
+new GetGoogleFonts(ggfOptions).download('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700&display=fallback', { cssFile: 'roboto.css' })
 
 module.exports = withOffline(withCSS(nextConfig))

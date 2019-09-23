@@ -81,7 +81,7 @@ dist/
 /.next/
 *.lock
 
-/static/fonts/*.woff2
+/static/fonts/*
 /static/assets/*
 !/static/assets/backgrounds
 faviconData.json

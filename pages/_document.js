@@ -1,12 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-const preloadCss = `.prouxLogo path { fill: #fff; }
-  #__next { height: 100%; width: 100%; }
-  svg { overflow: hidden; }
-  svg:root { overflow: visible; }`
-
-const cssDataUri = 'data:text/css;charset=utf-8;base64,' + Buffer.from(preloadCss).toString('base64')
-
 export default class MyDocument extends Document {
   render () {
     return (
@@ -24,7 +17,6 @@ export default class MyDocument extends Document {
           <link rel='manifest' href='/static/assets/site.webmanifest' />
           <link rel='mask-icon' href='/static/assets/safari-pinned-tab.svg' color='#366fa5' />
           <link rel='shortcut icon' href='/static/assets/favicon.ico' />
-          <link rel='stylesheet' href={cssDataUri} />
         </Head>
         <body style={{ height: '100%', width: '100%', margin: '0' }}>
           <Main style={{ height: '100%', width: '100%' }} />
