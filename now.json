@@ -20,5 +20,42 @@
                 "Service-Worker-Allowed": "/"
             }
         }
-    ]
+    ],
+    "static": {
+        "headers": [
+            {
+                "source": "**/*.@(html)",
+                "headers": [
+                    {
+                        "key": "Referrer-Policy",
+                        "value": "no-referrer-when-downgrade"
+                    },
+                    {
+                        "key": "X-XSS-Protection",
+                        "value": "1; mode=block"
+                    },
+                    {
+                        "key": "Feature-Policy",
+                        "value": "geolocation 'self'; notifications 'self'; push 'self'; microphone 'self'; camera 'self'"
+                    }
+                ]
+            }, {
+                "source": "*",
+                "headers": [
+                    {
+                        "key": "Strict-Transport-Security",
+                        "value": "max-age=31536000"
+                    },
+                    {
+                        "key": "X-Content-Type-Options",
+                        "value": "nosniff"
+                    },
+                    {
+                        "key": "X-Frame-Options",
+                        "value": "SAMEORIGIN"
+                    }
+                ]
+            }
+        ]
+    }
 }
