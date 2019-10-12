@@ -27,7 +27,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.5",
+    "@fortawesome/react-fontawesome": "^0.1.6",
     "@proux/logo": "git+https://git@github.com/proux/logo.git",
     "@zeit/next-css": "^1.0.1",
     "babel-plugin-inline-react-svg": "^1.1.0",
@@ -36,7 +36,8 @@
     "next": "^9.1.1",
     "next-offline": "^4.0.6",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "typescript": "^3.6.3"
   },
   "babel": {
     "presets": [
@@ -71,7 +72,7 @@
     "pa11y": "^5.3.0",
     "snyk": "^1.234.2",
     "standard": "^14.3.1",
-    "stylelint": "^11.0.0",
+    "stylelint": "^11.1.1",
     "stylelint-config-standard": "^19.0.0",
     "typescript": "^3.6.4"
   }

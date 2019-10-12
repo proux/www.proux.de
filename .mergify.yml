@@ -4,7 +4,6 @@ pull_request_rules:
       - status-success=codeclimate
       - status-success=now
       - status-success=security/snyk
-      
     actions:
       merge:
         method: merge
