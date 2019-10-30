@@ -3,7 +3,7 @@ pull_request_rules:
     conditions:
       - status-success=codeclimate
       - status-success=now
-      - status-success=security/snyk
+      - status-success=security/snyk - package.json (proux)
     actions:
       merge:
         method: merge
