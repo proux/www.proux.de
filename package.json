@@ -37,7 +37,8 @@
     "next-offline": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0"
   },
   "babel": {
     "presets": [

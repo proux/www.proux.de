@@ -5,24 +5,31 @@ const withOffline = require('next-offline')
 
 const nextConfig = {
   workboxOpts: {
-    swDest: 'static/service-worker.js',
+    swDest: process.env.NEXT_EXPORT
+      ? 'service-worker.js'
+      : 'static/service-worker.js',
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
-        handler: 'networkFirst',
+        handler: 'NetworkFirst',
         options: {
-          cacheName: 'https-calls',
-          networkTimeoutSeconds: 15,
+          cacheName: 'offlineCache',
           expiration: {
-            maxEntries: 150,
-            maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+            maxEntries: 200,
           },
-          cacheableResponse: {
-            statuses: [0, 200]
-          }
-        }
-      }
-    ]
+        },
+      },
+    ],
+  },
+  experimental: {
+    async rewrites() {
+      return [
+        {
+          source: '/service-worker.js',
+          destination: '/_next/static/service-worker.js',
+        },
+      ]
+    },
   },
   cssLoaderOptions: {
     url: false
