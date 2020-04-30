@@ -34,7 +34,7 @@
     "cli-real-favicon": "0.0.8",
     "get-google-fonts": "^1.2.2",
     "next": "^9.3.5",
-    "next-offline": "^5.0.1",
+    "next-offline": "^5.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.8.3",
