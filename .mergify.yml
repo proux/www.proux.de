@@ -2,7 +2,7 @@ pull_request_rules:
   - name: automatic merge on CI success
     conditions:
       - status-success=codeclimate
-      - status-success=now
+      - status-success=Vercel
       - status-success=security/snyk (proux)
     actions:
       merge:
