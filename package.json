@@ -35,7 +35,7 @@
     "get-google-fonts": "^1.2.2",
     "next": "^9.5.5",
     "next-offline": "^5.0.2",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "typescript": "^4.0.3",
     "webpack": "^4.44.2"
