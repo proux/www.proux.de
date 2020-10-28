@@ -27,7 +27,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@fortawesome/react-fontawesome": "^0.1.12",
     "@proux/logo": "git+https://git@github.com/proux/logo.git",
     "@zeit/next-css": "^1.0.1",
     "babel-plugin-inline-react-svg": "^1.1.1",
