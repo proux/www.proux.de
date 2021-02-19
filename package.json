@@ -30,7 +30,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@proux/logo": "git+https://git@github.com/proux/logo.git",
     "@zeit/next-css": "^1.0.1",
-    "babel-plugin-inline-react-svg": "^1.1.1",
+    "babel-plugin-inline-react-svg": "^2.0.0",
     "cli-real-favicon": "0.0.8",
     "get-google-fonts": "^1.2.2",
     "next": "^9.5.4",
