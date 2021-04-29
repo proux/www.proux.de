@@ -33,7 +33,7 @@
     "babel-plugin-inline-react-svg": "^2.0.0",
     "cli-real-favicon": "0.0.8",
     "get-google-fonts": "^1.2.2",
-    "next": "^9.5.4",
+    "next": "^10.2.0",
     "next-offline": "^5.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
