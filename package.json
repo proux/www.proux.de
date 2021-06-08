@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-standard": "^4.0.2",
     "pa11y": "^5.3.0",
-    "snyk": "^1.622.0",
+    "snyk": "^1.623.0",
     "standard": "^16.0.1",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
