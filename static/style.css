@@ -265,6 +265,7 @@ header {
   margin-bottom: 50px;
   transform: scale(1.1);
   vertical-align: middle;
+  width: 250px;
 }
 
 .prouxLogo path {

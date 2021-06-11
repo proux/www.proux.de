@@ -165,7 +165,7 @@ export default () => {
       <div className='footerwrap'>
         <div className='container'>
           <div className='row'>
-            <small>&copy; Copyright 2020</small>
+            <small>&copy; Copyright 2021</small>
           </div>
         </div>
       </div>
