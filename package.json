@@ -70,7 +70,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-standard": "^5.0.0",
-    "pa11y": "^6.0.0",
+    "pa11y": "^6.0.1",
     "snyk": "^1.650.0",
     "standard": "^16.0.3",
     "stylelint": "^13.13.1",
